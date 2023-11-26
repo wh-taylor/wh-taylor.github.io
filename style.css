@@ -1,0 +1,106 @@
+* {
+    color: white;
+}
+
+header, footer {
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+header h1, footer h1 {
+    font-size: 35px;
+    color: white;
+}
+
+header p {
+    font-size: 20px;
+}
+
+header a {
+    color: #d7a83b;
+    text-decoration: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(16, 16, 16);
+}
+
+main {
+    width: 800px;
+    margin: auto;
+    padding: 20px;
+    background-color: rgb(25, 25, 26);
+}
+
+.content img, .content iframe, iframe {
+    display: block;
+    margin: 1ch auto 2ch;
+    padding: 10px;
+    height: 250px;
+    width: auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-align: center;
+    font-family: monospace;
+    font-style: bold;
+}
+
+p, ul, ol, td, th, code {
+    font-family: monospace;
+    font-size: large;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td, th {
+    padding: 10px;
+}
+
+tr { 
+    border-bottom: 2px solid white;
+}
+
+tbody tr:last-child { 
+    border-bottom: none;
+}
+
+table td + td, th + th, td + th, th + td {
+    border-left: 2px solid white;
+}
+
+table tr + tr {
+    border-top: 2px solid white;
+}
+
+.credit {
+    text-align: right;
+    font-style: italic;
+}
+
+.quote {
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-left: 3px solid white;
+}
+
+.callout {
+    background-color: rgba(62, 58, 71, 0.379);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.inlinecode {
+    background-color: rgba(62, 58, 71, 0.379);
+    padding: 2px;
+}
