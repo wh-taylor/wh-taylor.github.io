@@ -6,41 +6,41 @@ class Page:
         self.title = title
         self.elements: List[Element] = []
 
-    def _add_element(self, element: Element):
+    def add(self, element: Element):
         self.elements.append(element)
     
     def add_heading(self, level: int, text: Text):
-        self._add_element(Heading(level, text))
+        self.add(Heading(level, text))
 
     def add_paragraph(self, text: Text):
-        self._add_element(Paragraph(text))
+        self.add(Paragraph(text))
 
     def add_image(self, src: str, alt: str):
-        self._add_element(Image(src, alt))
+        self.add(Image(src, alt))
 
     def add_raw(self, html: str):
-        self._add_element(RawHTML(html))
+        self.add(RawHTML(html))
 
     def add_inline_code(self, text: Text):
-        self._add_element(InlineCode(text))
+        self.add(InlineCode(text))
 
     def add_block_code(self, text: Text):
-        self._add_element(BlockCode(text))
+        self.add(BlockCode(text))
 
     def add_callout(self, text: Text):
-        self._add_element(Callout(text))
+        self.add(Callout(text))
 
     def add_unordered_list(self, texts: List[Text]):
-        self._add_element(UnorderedList(texts))
+        self.add(UnorderedList(texts))
     
     def add_ordered_list(self, texts: List[Text]):
-        self._add_element(OrderedList(texts))
+        self.add(OrderedList(texts))
 
     def add_quote(self, text: Text):
-        self._add_element(Quote(text))
+        self.add(Quote(text))
 
     def add_quote_credit(self, text: Text):
-        self._add_element(QuoteCredit(text))
+        self.add(QuoteCredit(text))
 
     def write_to_file(self, file: str):
         with open(file, 'w') as f:
