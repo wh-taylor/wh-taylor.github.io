@@ -3,9 +3,9 @@
     --red: #db3b1f;
     --orange: #e49723;
     --yellow: #e4e423;
-    --green: #26c426;
-    --blue: #2353e4;
-    --purple: #ac1cd8;
+    --green: #74dc74;
+    --blue: #617fd9;
+    --purple: #ae5bc7;
     --primary-neutral: #e9e9e9;
     --secondary: #7785e0;
     --tertiary: #e6d478;
@@ -28,10 +28,10 @@
 /* :root {
     --red: #db3b1f;
     --orange: #e49723;
-    --yellow: #e4d423;
-    --green: #26c426;
-    --blue: #0f3197;
-    --purple: #ac1cd8;
+    --yellow: #e4e423;
+    --green: #74dc74;
+    --blue: #617fd9;
+    --purple: #ae5bc7;
     --primary-neutral: #232323;
     --secondary: var(--blue);
     --tertiary: #cda710;
