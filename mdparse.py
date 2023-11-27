@@ -10,7 +10,7 @@ extensions = [
 
 def main():
     if len(sys.argv) == 1:
-        print("expected file name(s)")
+        print("expected source markdown, target html, and page name as args")
         return
 
     md_file = sys.argv[1]
