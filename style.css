@@ -259,6 +259,7 @@ p:has(cite), cite {
 }
 
 code {
+    display: inline-block;
     background-color: var(--code-background);
     border: 2px solid var(--primary-neutral);
     padding: 3px;
