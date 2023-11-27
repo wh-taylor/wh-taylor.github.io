@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Hayden Taylor</title>
+    <title>Home - Hayden Taylor</title>
     <link rel="stylesheet" href="./style.css">
     <link rel="icon" href="img/coloredlogo.svg" type="image/x-icon">
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
@@ -15,51 +15,80 @@
 <body>
     <header>
         <div style="background-color: rgb(25, 25, 68); padding-top: 3px; padding-bottom: 3px;">
-            <h1><img src="img/transparentlogo.svg" alt="HT" style="height: 50px; vertical-align: middle;"> Hayden Taylor</h1>
+            <h1><img src="img/transparentlogo.svg" alt="HT" style="height: 50px; vertical-align: middle;">
+                <strong>Hayden Taylor</strong></h1>
             <p><a href="index.html">Home</a> | <a href="">Articles</a> | <a href="index.html">Resources</a></p>
         </div>
     </header>
     <main>
-        <h1>Demo</h1>
+        <div class="callout">
+            <div class="toc">
+                <ul>
+                    <li><a href="#demo">Demo</a>
+                        <ul>
+                            <li><a href="#mathematics">Mathematics</a></li>
+                            <li><a href="#programming">Programming</a></li>
+                            <li><a href="#general-formatting">General Formatting</a>
+                                <ul>
+                                    <li><a href="#font-styles">Font styles</a></li>
+                                    <li><a href="#links">Links</a></li>
+                                    <li><a href="#tooltips">Tooltips</a></li>
+                                    <li><a href="#lists">Lists</a></li>
+                                    <li><a href="#tables">Tables</a></li>
+                                    <li><a href="#quotes">Quotes</a></li>
+                                    <li><a href="#admonitions">Admonitions</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <h1 id="demo"><a href="#demo">Demo</a></h1>
         <p>My name is Hayden.</p>
-        <p>
-            This is an experimental blog.
-        </p>
-        <h2>Mathematics</h2>
-        <p>
-            Here is an inline equation \(x = {-b \pm \sqrt{b^2-4ac} \over 2a}\).
-            Here is an equation with its own line. \[x = {-b \pm \sqrt{b^2-4ac} \over 2a}\]
-        </p>
+        <p>This is an experimental blog.</p>
+        <h2 id="mathematics"><a href="#mathematics">Mathematics</a></h2>
+        <p>Here is an inline equation \(x = {-b \pm \sqrt{b^2-4ac} \over 2a}\).
+            Here is an equation with its own line.</p>
+        <p>\[x = {-b \pm \sqrt{b^2-4ac} \over 2a}\]</p>
         <p>Here is a cool looking three-dimensional graph. I think the equation for it is \(f(x, y) = x^{2}-y^{2}\).</p>
-        <div class="content"><img src="https://ximera.osu.edu/mklynn2/multivariable/content/01_2_graphing/graphics/CalcPlot3D-hyper_para2.png" alt="Logo"></div>
+        <p><img alt="Three-dimensional graph"
+                src="https://ximera.osu.edu/mklynn2/multivariable/content/01_2_graphing/graphics/CalcPlot3D-hyper_para2.png" />
+        </p>
         <p>\[f(x, y) = x^{2}-y^{2}\]</p>
         <p>Here is an embedded desmos graph.</p>
-        <iframe src="https://www.desmos.com/calculator/xooanjckfz?embed" width="200" height="200" style="border: 1px solid #ccc" frameborder=0></iframe>
-        <p>\[f(x)=\frac{2 \sin {3x}}{x}\]</p>
-        <h2>Programming</h2>
-        <p>
-            Here is some code. First, we have <code class="inlinecode">inline code</code>, but we also have code blocks.
+        <iframe src="https://www.desmos.com/calculator/xooanjckfz?embed" width="200" height="200"
+            style="border: 1px solid #ccc" frameborder=0></iframe>
+
+        <h2 id="programming"><a href="#programming">Programming</a></h2>
+        <p>Here is some code. First we have <code>inline code</code>, but we also have code blocks.</p>
+        <pre><code class="language-rs">fn main() {
+    println!(&quot;hello world&quot;);
+}
+</code></pre>
+        <h2 id="general-formatting"><a href="#general-formatting">General Formatting</a></h2>
+        <h3 id="font-styles"><a href="#font-styles">Font styles</a></h3>
+        <p>Text can be <strong>bold</strong>, <em>italicized</em>, or <strong><em>both</em></strong>. It can also be
+            <u>underlined <em>with any</em> <strong>combination</strong> of <strong><em>font styles</em></strong></u>.
         </p>
-        <div class="callout">
-            <pre><code><span style="color: #aa5ead">fn</span> main() {
-    <span><span style="color: rgb(138, 120, 180)">println!</span>(<span style="background-color: #c7ad4653;">"hello world"</span>);</span>
-}</code></pre>
-        </div>
-        <h2>General Formatting</h2>
-        <h3>Lists</h3>
+        <h3 id="links"><a href="#links">Links</a></h3>
+        <p>Here is a <a href="#">link</a> to the top of the page.</p>
+        <h3 id="tooltips"><a href="#tooltips">Tooltips</a></h3>
+        <p>Here&rsquo;s a <span class="tooltip" title="Hi!!! I am a tooltip.">little tooltip!</span></p>
+        <h3 id="lists"><a href="#lists">Lists</a></h3>
         <p>Here is a list of stuff.</p>
         <ul>
             <li>Thing 1</li>
             <li>Thing 2</li>
             <li>Thing 3</li>
         </ul>
-        <p>Now, here is an ordered list of stuff.</p>
+        <p>Now, here is a list of ordered stuff.</p>
         <ol>
             <li>Thing 1</li>
             <li>Thing 2</li>
             <li>Thing 3</li>
         </ol>
-        <h3>Tables</h3>
+        <h3 id="tables"><a href="#tables">Tables</a></h3>
         <p>Here is a table.</p>
         <table>
             <thead>
@@ -90,15 +119,31 @@
                 </tr>
             </tbody>
         </table>
-        <h3>Quotes</h3>
+
+        <h3 id="quotes"><a href="#quotes">Quotes</a></h3>
         <p>Here is a quote.</p>
-        <div class="quote">
-            <p>A monad is a monoid in the category of endofunctors. What's the problem?</p>
-            <span class="credit"><p>- Philip Wadler</p></span>
+        <blockquote>
+            <p>A monad is a monoid in the category of endofunctors. What&rsquo;s the problem?</p>
+            <p><cite>- Philip Wadler</cite></p>
+        </blockquote>
+        <h3 id="admonitions"><a href="#admonitions">Admonitions</a></h3>
+        <p>Here are a few admonitions.</p>
+        <div class="admonition note">
+            <p class="admonition-title">Note</p>
+            <p>Hello! This is a note admonition.</p>
         </div>
-        <h3>References</h3>
-        <p>Here is a reference to another page.</p>
-        
+        <div class="admonition tip">
+            <p class="admonition-title">Tip</p>
+            <p>Hello! This is a tip admonition.</p>
+        </div>
+        <div class="admonition warning">
+            <p class="admonition-title">Warning</p>
+            <p>Hello! This is a warning admonition.</p>
+        </div>
+        <div class="admonition danger">
+            <p class="admonition-title">Danger</p>
+            <p>Hello! This is a danger admonition.</p>
+        </div>
     </main>
     <footer>
         <div style="background-color: rgb(25, 25, 68); padding-top: 20px; padding-bottom: 20px;">
