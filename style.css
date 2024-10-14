@@ -1,4 +1,3 @@
-/* Dark mode */
 :root {
     --red: #db3b1f;
     --orange: #e49723;
@@ -6,13 +5,15 @@
     --green: #74dc74;
     --blue: #617fd9;
     --purple: #ae5bc7;
-    --primary-neutral: #e9e9e9;
+
+    --font: 'Cascadia Code', 'Cascadia Mono', 'Consolas', monospace;
+
+    /* Dark mode */
+    --primary-neutral: #c7c7c7;
     --secondary: #7785e0;
     --tertiary: #e6d478;
     --secondary-background: #2d2f3455;
     --background: #101010;
-    --code-background: #1f1f24;
-    --code-text: #d7d7de;
     --note-primary: #0b2849;
     --note-background: #3467a0;
     --tip-primary: #0c4314;
@@ -21,24 +22,18 @@
     --warning-background: #ac8c2a;
     --danger-primary: #420f09;
     --danger-background: #ba4033;
-    --font: monospace;
-}
 
-/* Light mode */
-/* :root {
-    --red: #db3b1f;
-    --orange: #e49723;
-    --yellow: #e4e423;
-    --green: #74dc74;
-    --blue: #617fd9;
-    --purple: #ae5bc7;
-    --primary-neutral: #232323;
-    --secondary: var(--blue);
+    /* Code dark mode */
+    --code-background: #1f1f24;
+    --inline-code-text: #54d768;
+    --code-text: #c1c1c9;
+
+    /* Light mode */
+    /* --primary-neutral: #232323;
+    --secondary: #2e4a9d;
     --tertiary: #cda710;
     --secondary-background: #a4a6b455;
-    --background: #f1f1f1;
-    --code-background: #30313a;
-    --code-text: #d7d7de;
+    --background: #ffffff;
     --note-primary: #3467a0;
     --note-background: #9abee7;
     --tip-primary: #33ba47;
@@ -46,9 +41,13 @@
     --warning-primary: #d1ac3e;
     --warning-background: #ebe0bf;
     --danger-primary: #ba4033;
-    --danger-background: #e6b1ab;
-    --font: monospace;
-} */
+    --danger-background: #e6b1ab; */
+
+    /* Code light mode */
+    /* --code-background: #e1e1e1;
+    --inline-code-text: #f82762;
+    --code-text: #171717; */
+}
 
 header, footer {
     text-align: center;
@@ -65,6 +64,7 @@ header h1, footer h1 {
 
 header p {
     font-size: 20px;
+    color: white;
 }
 
 header a {
@@ -104,7 +104,8 @@ main img, main iframe {
 
 .toc a {
     text-decoration: none;
-    font-size: 20px;
+    font-size: 14px;
+    color: white;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -112,7 +113,6 @@ h1, h2, h3, h4, h5, h6 {
     text-align: left;
     font-family: var(--font);
     font-weight: normal;
-    padding-top: 10px;
 }
 
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
@@ -153,7 +153,7 @@ p, ul, ol, td, th, cite, .callout, blockquote {
 a, .tooltip {
     color: var(--secondary);
     font-family: var(--font);
-    font-size: large;
+    font-size: medium;
     transition: color .2s ease-in-out;
 }
 
@@ -168,8 +168,11 @@ table {
 
 td, th {
     padding: 10px;
-    /* background-color: var(--secondary-background); */
     border: 2px solid var(--primary-neutral);
+}
+
+th {
+    background-color: var(--secondary-background);
 }
 
 blockquote {
@@ -261,15 +264,19 @@ p:has(cite), cite {
 code {
     display: inline-block;
     background-color: var(--code-background);
-    border: 2px solid var(--primary-neutral);
     padding: 3px;
-    color: var(--code-text);
+    color: var(--inline-code-text);
     font-family: monospace;
     font-size: large;
 }
 
 pre > code {
+    border: 2px solid var(--primary-neutral);
     display: block;
+    color: var(--code-text);
     background-color: var(--code-background);
     padding: 20px;
+    overflow: hidden;
+    white-space: pre-wrap;
+    word-wrap: break-word;
 }

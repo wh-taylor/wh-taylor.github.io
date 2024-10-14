@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>{% title %}</title>
+    <title>Resources - Hayden Taylor</title>
     <link rel="stylesheet" href="./style.css">
     <link rel="icon" href="img/coloredlogo.svg" type="image/x-icon">
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
@@ -20,7 +20,30 @@
         </div>
     </header>
     <main>
-        {% main %}
+        <p><strong>Hayden Taylor</strong> <br>
+<strong>27-11-2023</strong> <br></p>
+<div class="toc">
+<ul>
+<li><a href="#config">Config</a></li>
+</ul>
+</div>
+<h1 id="config">Config</h1>
+<p>create a file in <code>/etc/interception/dual-function-keys/mappings.yml</code>. this is where the configuration specific to the dual-function-keys plugin will go</p>
+<p>add the following to the file:</p>
+<pre><code>MAPPINGS:
+  - KEY: KEY_CAPSLOCK
+    TAP: KEY_ESC
+    HOLD: KEY_LEFTCTRL
+
+  - KEY: KEY_LEFTSHIFT
+    TAP: KEY_BACKSPACE
+    HOLD: KEY_LEFTSHIFT
+
+  - KEY: KEY_RIGHTSHIFT
+    TAP: KEY_DELETE
+    HOLD: KEY_RIGHTSHIFT
+</code></pre>
+<p><code>KEY</code> determines the key to modify, <code>TAP</code> defines what it should be rebound to when tapped, and <code>HOLD</code> defines rebinding when held</p>
     </main>
     <footer>
         <div style="background-color: rgb(25, 25, 68); padding-top: 20px; padding-bottom: 20px;">
