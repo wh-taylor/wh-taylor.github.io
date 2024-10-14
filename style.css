@@ -9,7 +9,7 @@
     --font: 'Cascadia Code', 'Cascadia Mono', 'Consolas', monospace;
 
     /* Dark mode */
-    --primary-neutral: #c7c7c7;
+    /* --primary-neutral: #c7c7c7;
     --secondary: #7785e0;
     --tertiary: #e6d478;
     --secondary-background: #2d2f3455;
@@ -21,7 +21,7 @@
     --warning-primary: #42350c;
     --warning-background: #ac8c2a;
     --danger-primary: #420f09;
-    --danger-background: #ba4033;
+    --danger-background: #ba4033; */
 
     /* Code dark mode */
     --code-background: #1f1f24;
@@ -29,7 +29,7 @@
     --code-text: #c1c1c9;
 
     /* Light mode */
-    /* --primary-neutral: #232323;
+    --primary-neutral: #232323;
     --secondary: #2e4a9d;
     --tertiary: #cda710;
     --secondary-background: #a4a6b455;
@@ -41,7 +41,7 @@
     --warning-primary: #d1ac3e;
     --warning-background: #ebe0bf;
     --danger-primary: #ba4033;
-    --danger-background: #e6b1ab; */
+    --danger-background: #e6b1ab;
 
     /* Code light mode */
     /* --code-background: #e1e1e1;
