@@ -105,7 +105,7 @@ main img, main iframe {
 .toc a {
     text-decoration: none;
     font-size: 14px;
-    color: white;
+    color: var(--primary-neutral);
 }
 
 h1, h2, h3, h4, h5, h6 {
