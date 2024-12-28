@@ -6,22 +6,22 @@
     --blue: #617fd9;
     --purple: #ae5bc7;
 
-    --font: 'Cascadia Code', 'Cascadia Mono', 'Consolas', monospace;
+    --font: 'Fira Code', 'Cascadia Code', 'Cascadia Mono', 'Consolas', monospace;
 
     /* Dark mode */
-    /* --primary-neutral: #c7c7c7;
+    --primary-neutral: #c7c7c7;
     --secondary: #7785e0;
     --tertiary: #e6d478;
     --secondary-background: #2d2f3455;
     --background: #101010;
     --note-primary: #0b2849;
-    --note-background: #3467a0;
+    --note-background: #245790;
     --tip-primary: #0c4314;
-    --tip-background: #259b37;
+    --tip-background: #158b27;
     --warning-primary: #42350c;
-    --warning-background: #ac8c2a;
+    --warning-background: #9c7c1a;
     --danger-primary: #420f09;
-    --danger-background: #ba4033; */
+    --danger-background: #aa3023;
 
     /* Code dark mode */
     --code-background: #1f1f24;
@@ -29,7 +29,7 @@
     --code-text: #c1c1c9;
 
     /* Light mode */
-    --primary-neutral: #232323;
+    /* --primary-neutral: #232323;
     --secondary: #2e4a9d;
     --tertiary: #cda710;
     --secondary-background: #a4a6b455;
@@ -41,7 +41,7 @@
     --warning-primary: #d1ac3e;
     --warning-background: #ebe0bf;
     --danger-primary: #ba4033;
-    --danger-background: #e6b1ab;
+    --danger-background: #e6b1ab; */
 
     /* Code light mode */
     /* --code-background: #e1e1e1;
@@ -87,7 +87,7 @@ body {
 }
 
 main {
-    width: min(90%, 800px);
+    width: min(90%, 1200px);
     margin: auto;
     padding: 20px;
     background-color: var(--background);
@@ -104,7 +104,6 @@ main img, main iframe {
 
 .toc a {
     text-decoration: none;
-    font-size: 14px;
     color: var(--primary-neutral);
 }
 
@@ -112,7 +111,7 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--secondary);
     text-align: left;
     font-family: var(--font);
-    font-weight: normal;
+    font-weight: bold;
 }
 
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
@@ -144,16 +143,15 @@ h6, h6 a {
     font-size: 20px;
 }
 
-p, ul, ol, td, th, cite, .callout, blockquote {
+p, ul, ol, td, th, cite, .callout, blockquote, code {
     color: var(--primary-neutral);
     font-family: var(--font);
-    font-size: 16px;
+    font-size: 20px;
 }
 
 a, .tooltip {
     color: var(--secondary);
     font-family: var(--font);
-    font-size: medium;
     transition: color .2s ease-in-out;
 }
 
@@ -267,7 +265,6 @@ code {
     padding: 3px;
     color: var(--inline-code-text);
     font-family: monospace;
-    font-size: large;
 }
 
 pre > code {
