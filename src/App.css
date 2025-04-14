@@ -112,14 +112,18 @@
 }
 
 .App-body {
-  margin: 50px;
+  padding: 50px;
 }
 
-.App-body h1, h2, h3, h4, h5, h6 {
-  color: #222;
-  font-weight: 400;
+.App-body h1 {
+  font-weight: 600;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .App-body p {
+  /* color: #ffffff; */
+  font-size: larger;
   font-weight: 300;
 }

@@ -3,7 +3,6 @@ import logo from './images/logo.svg';
 import gitHubLogo from './images/githublogo.svg';
 import linkedInLogo from './images/linkedinlogo.svg';
 import name from './images/name.svg';
-import mainPicture from './images/mainpicture.jpg';
 import './App.css';
 
 function App() {
@@ -32,10 +31,10 @@ function App() {
         </div>
       </header>
       <div className="big-picture">
-        <img src={mainPicture} alt="Hayden Taylor giving a talk on computational knot theory." />
       </div>
       <div className="App-body">
-        
+        <h1>W. Hayden Taylor</h1>
+        <p>Mathematics and computer science undergraduate student at the University of Delaware.</p>
       </div>
     </div>
   );
