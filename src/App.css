@@ -133,6 +133,7 @@
   float: right;
   display: block;
   margin-left: calc(20px + 5vw);
+  margin-bottom: 20px;
 }
 
 .App-body h1 {
@@ -140,6 +141,22 @@
   margin-bottom: 0px;
   margin-top: 0px;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.App-body h2 {
+  font-weight: 600;
+  margin-bottom: 0px;
+  margin-top: 10px;
+  font-weight: 500;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.App-body h3 {
+  font-weight: 600;
+  margin-bottom: 15px;
+  margin-top: 10px;
+  font-weight: 300;
+  font-style: italic;
 }
 
 .App-body p {
