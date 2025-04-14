@@ -1,11 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Button } from 'react-bootstrap';
 import logo from './images/logo.svg';
 import gitHubLogo from './images/githublogo.svg';
 import linkedInLogo from './images/linkedinlogo.svg';
 import name from './images/name.svg';
 import './App.css';
 
+type Page = "Home" | "Research" | "Projects" | "Talks";
+
 function App() {
+  const [page, setPage] = useState<Page>("Home");
+
   return (
     <div className="App">
       <header className="App-header">
@@ -29,6 +34,28 @@ function App() {
             </a>
           </div>
         </div>
+        <nav>
+          <Button 
+            className={page === "Home" ? "active" : "inactive"}
+            onClick={() => setPage("Home")}>
+            HOME
+          </Button>
+          <Button
+            className={page === "Research" ? "active" : "inactive"}
+            onClick={() => setPage("Research")}>
+            RESEARCH
+          </Button>
+          <Button
+            className={page === "Projects" ? "active" : "inactive"}
+            onClick={() => setPage("Projects")}>
+            PROJECTS
+          </Button>
+          <Button
+            className={page === "Talks" ? "active" : "inactive"}
+            onClick={() => setPage("Talks")}>
+            TALKS
+          </Button>
+        </nav>
       </header>
       <div className="big-picture">
       </div>

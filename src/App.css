@@ -112,7 +112,7 @@
 }
 
 .App-body {
-  padding: 50px;
+  padding: 0px 50px;
 }
 
 .App-body h1 {
@@ -126,4 +126,45 @@
   /* color: #ffffff; */
   font-size: larger;
   font-weight: 300;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+nav {
+  /* width: 100%; */
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10vw; /* Add spacing on the left and right */
+}
+
+nav Button {
+  border: hidden;
+  background: transparent;
+  height: 50px;
+  cursor: pointer;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 300;
+  font-size: larger;
+  width: 100%;
+  position: relative;
+}
+
+nav Button::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #aaa;
+  transition: width 0.3s ease;
+}
+
+nav Button:hover::after,
+nav Button.active::after {
+  width: 100%;
+}
+
+nav Button.active::after {
+  background-color: #222;
+  width: 100%;
 }
