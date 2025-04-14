@@ -4,11 +4,9 @@
 
 .App-logo {
   height: calc(50px + 5vmin);
-  pointer-events: none;
 }
 
 .App-header {
-  /* min-height: 20vh; */
   padding: 5vh;
   padding-left: 50px;
   padding-right: 50px;
@@ -31,6 +29,15 @@
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+.App-header-div a img:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+.App-header-div a img {
+  transition: transform 0.3s ease;
 }
 
 .App-header-div {
@@ -60,26 +67,18 @@
   margin-bottom: 0px;
   font-style: italic;
 }
+
 .App-header-links {
   margin-left: auto;
   display: flex;
   align-items: center;
 }
+
 .App-header-links img {
   height: calc(5px + 5vmin);
-  pointer-events: none;
   margin-left: 20px;
 }
 
 .App-link {
   color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
