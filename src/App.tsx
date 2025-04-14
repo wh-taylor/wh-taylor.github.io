@@ -24,6 +24,28 @@ function App() {
             </a>
             <p>Undergraduate Mathematician.</p>
           </div>
+          <nav>
+            <Button 
+              className={page === "Home" ? "active" : "inactive"}
+              onClick={() => setPage("Home")}>
+              HOME
+            </Button>
+            <Button
+              className={page === "Research" ? "active" : "inactive"}
+              onClick={() => setPage("Research")}>
+              RESEARCH
+            </Button>
+            <Button
+              className={page === "Projects" ? "active" : "inactive"}
+              onClick={() => setPage("Projects")}>
+              PROJECTS
+            </Button>
+            <Button
+              className={page === "Talks" ? "active" : "inactive"}
+              onClick={() => setPage("Talks")}>
+              TALKS
+            </Button>
+          </nav>
           <div className="App-header-links">
             <a href="https://github.com/wh-taylor">
               <img src={gitHubLogo} alt="GitHub Link" />
@@ -33,28 +55,6 @@ function App() {
             </a>
           </div>
         </div>
-        <nav>
-          <Button 
-            className={page === "Home" ? "active" : "inactive"}
-            onClick={() => setPage("Home")}>
-            HOME
-          </Button>
-          <Button
-            className={page === "Research" ? "active" : "inactive"}
-            onClick={() => setPage("Research")}>
-            RESEARCH
-          </Button>
-          <Button
-            className={page === "Projects" ? "active" : "inactive"}
-            onClick={() => setPage("Projects")}>
-            PROJECTS
-          </Button>
-          <Button
-            className={page === "Talks" ? "active" : "inactive"}
-            onClick={() => setPage("Talks")}>
-            TALKS
-          </Button>
-        </nav>
       </header>
       <div className="big-picture">
       </div>
