@@ -1,24 +1,35 @@
 import React from 'react';
-import logo from './logo.svg';
+import logo from './images/logo.svg';
+import gitHubLogo from './images/githublogo.svg';
+import linkedInLogo from './images/linkedinlogo.svg';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <div className="App-header-div">
+          <a href=".">
+            <img src={logo} className="App-logo" alt="logo" />
+          </a>
+          <div className="App-header-text">
+            <h1>Hayden Taylor</h1>
+            <p>Mathematics & Computer Science Bachelors Student</p>
+            <p>University of Delaware</p>
+          </div>
+          <div className="App-header-links">
+            <a href="https://github.com/wh-taylor">
+              <img src={gitHubLogo} alt="GitHub Link" />
+            </a>
+            <a href="https://www.linkedin.com/in/william-hayden-taylor/">
+              <img src={linkedInLogo} alt="LinkedIn Link" />
+            </a>
+          </div>
+        </div>
       </header>
+      <p>
+      Test.
+      </p>
     </div>
   );
 }
