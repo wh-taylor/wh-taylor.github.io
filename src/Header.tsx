@@ -34,11 +34,6 @@ export function Header({page, setPage}: PageProps): JSX.Element {
               onClick={() => setPage("Projects")}>
               PROJECTS
             </Button>
-            <Button
-              className={page === "Talks" ? "active" : "inactive"}
-              onClick={() => setPage("Talks")}>
-              TALKS
-            </Button>
           </nav>
           <div className="App-header-links">
             <a href="https://github.com/wh-taylor">

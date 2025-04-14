@@ -1,10 +1,11 @@
 import React, { JSX, useState } from 'react';
-import { Home } from './pages/Home'
 import { Header } from './Header';
-
+import { HomePage } from './pages/HomePage'
+import { ResearchPage } from './pages/ResearchPage';
+import { ProjectsPage } from './pages/ProjectsPage';
 import './App.css';
 
-type Page = "Home" | "Research" | "Projects" | "Talks";
+type Page = "Home" | "Research" | "Projects";
 
 export interface PageProps {
   page: Page;
@@ -24,13 +25,11 @@ function App(): JSX.Element {
       {
         (() => {switch (page) {
           case 'Home':
-            return <Home />;
+            return <HomePage />;
           case 'Research':
-            return <Home />;
+            return <ResearchPage />;
           case 'Projects':
-            return <Home />;
-          case 'Talks':
-            return <Home />;
+            return <ProjectsPage />;
         }})()
       }
     </div>

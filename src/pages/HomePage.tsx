@@ -2,7 +2,7 @@ import portrait from '../images/portrait.jpg';
 import emailLogo from '../images/emaillogo.svg';
 import institutionLogo from '../images/institutionlogo.svg';
 
-export function Home() {
+export function HomePage() {
     return (
         <div className="App-body">
             <img className="portrait" src={portrait} alt="Portrait of Hayden Taylor" />
