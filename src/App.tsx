@@ -4,6 +4,7 @@ import logo from './images/logo.svg';
 import gitHubLogo from './images/githublogo.svg';
 import linkedInLogo from './images/linkedinlogo.svg';
 import name from './images/name.svg';
+import portrait from './images/portrait.jpg';
 import './App.css';
 
 type Page = "Home" | "Research" | "Projects" | "Talks";
@@ -59,6 +60,7 @@ function App() {
       <div className="big-picture">
       </div>
       <div className="App-body">
+        <img className="portrait" src={portrait} alt="Portrait of Hayden Taylor" />
         <h1>W. Hayden Taylor</h1>
         <p>Mathematics and computer science undergraduate student at the University of Delaware.</p>
       </div>

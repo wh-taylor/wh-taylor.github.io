@@ -124,7 +124,15 @@
 }
 
 .App-body {
-  padding: 0px 50px;
+  margin: 0 auto;
+  width: calc(400px + 30vw);
+}
+
+.App-body .portrait {
+  width: 40%;
+  float: right;
+  display: block;
+  margin-left: calc(20px + 5vw);
 }
 
 .App-body h1 {
