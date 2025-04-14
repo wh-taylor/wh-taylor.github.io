@@ -87,13 +87,13 @@
 .App-header-links {
   margin-left: auto;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
 }
 
 .App-header-links img {
   height: calc(5px + 5vmin);
-  margin-bottom: 20px;
+  margin-left: 20px;
 }
 
 .App-link {
