@@ -235,3 +235,11 @@ nav Button.active::after {
   width: 40%;
   float: right;
 }
+
+@media (max-width: 450px) {
+  .project-entry img {
+    width: 100%;
+    float: none;
+    margin-left: 0;
+  }
+}
