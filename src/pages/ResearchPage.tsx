@@ -4,7 +4,7 @@ export function ResearchPage() {
     return (
         <div className="App-body">
             <h1>Research</h1>
-            <div className="research-entry">
+            <div className="project-entry">
                 <img src={pdcodediagram} alt="" />
                 <h2>Applying Machine Learning to Knot Diagram Reduction</h2>
                 <h3>Principal Investigator: Dr. Deniz Kutluay</h3>
