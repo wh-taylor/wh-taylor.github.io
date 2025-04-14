@@ -1,5 +1,21 @@
 .App {
-  text-align: center;
+  text-align: left;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #ffffff; 
+}
+
+::-webkit-scrollbar-thumb {
+  background: #222222; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3c3c3c; 
 }
 
 .App-logo {
@@ -81,4 +97,28 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.big-picture {
+  width: 100%;
+  display: flex;
+  /* text-align: center; */
+}
+
+.big-picture img {
+  width: 100%;
+  align-self: right
+}
+
+.App-body {
+  margin: 50px;
+}
+
+.App-body h1, h2, h3, h4, h5, h6 {
+  color: #222;
+  font-weight: 400;
+}
+
+.App-body p {
+  font-weight: 300;
 }
