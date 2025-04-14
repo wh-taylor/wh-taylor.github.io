@@ -14,7 +14,9 @@ function App() {
             <img src={logo} className="App-logo" alt="logo" />
           </a>
           <div className="App-header-text">
-            <img src={name} className="App-logo-name" alt="Hayden Taylor" />
+            <a href=".">
+              <img src={name} className="App-logo-name" alt="Hayden Taylor" />
+            </a>
             <p>Mathematics & Computer Science Bachelors Student</p>
             <p>University of Delaware</p>
           </div>
