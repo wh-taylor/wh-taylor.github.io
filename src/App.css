@@ -143,7 +143,6 @@
 }
 
 .App-body p {
-  /* color: #ffffff; */
   font-size: larger;
   font-weight: 300;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -187,4 +186,25 @@ nav Button.active::after {
 nav Button.active::after {
   background-color: #222;
   width: 100%;
+}
+
+.listing {
+  color: black;
+  font-size: medium;
+  font-weight: 300;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-left: 15px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.listing a {
+  text-decoration: none;
+  color: black;
+}
+
+.listing img {
+  width: 25px;
+  margin-right: 20px;
 }
