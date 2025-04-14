@@ -19,7 +19,7 @@
 }
 
 .App-logo {
-  height: calc(50px + 5vmin);
+  height: calc(30px + 8vmin);
 }
 
 .App-header {
@@ -79,6 +79,7 @@
 .App-header-text {
   margin-left: 40px;
   text-align: left;
+  width: 30vw;
 }
 
 .App-header-text h1 {
@@ -90,7 +91,7 @@
 .App-logo-name {
   margin-top: 0px;
   margin-bottom: 5px;
-  height: calc(3px + 5vmin);
+  height: calc(0px + 3vmin);
 }
 
 .App-header-text p {
@@ -128,7 +129,7 @@
 
 .App-body {
   margin: 0 auto;
-  width: calc(400px + 30vw);
+  width: min(calc(400px + 30vw), 80vw);
   animation: fadeIn 1s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
 }
 
