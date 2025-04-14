@@ -2,6 +2,7 @@ import React from 'react';
 import logo from './images/logo.svg';
 import gitHubLogo from './images/githublogo.svg';
 import linkedInLogo from './images/linkedinlogo.svg';
+import name from './images/name.svg';
 import './App.css';
 
 function App() {
@@ -13,7 +14,7 @@ function App() {
             <img src={logo} className="App-logo" alt="logo" />
           </a>
           <div className="App-header-text">
-            <h1>Hayden Taylor</h1>
+            <img src={name} className="App-logo-name" alt="Hayden Taylor" />
             <p>Mathematics & Computer Science Bachelors Student</p>
             <p>University of Delaware</p>
           </div>
