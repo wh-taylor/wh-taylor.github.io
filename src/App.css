@@ -116,17 +116,6 @@
   color: #61dafb;
 }
 
-.big-picture {
-  width: 100%;
-  display: flex;
-  /* text-align: center; */
-}
-
-.big-picture img {
-  width: 100%;
-  align-self: right
-}
-
 .App-body {
   margin: 0 auto;
   width: min(calc(400px + 30vw), 80vw);
@@ -167,7 +156,6 @@
 .App-body p {
   font-size: larger;
   font-weight: 300;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 nav {
@@ -182,7 +170,6 @@ nav Button {
   background: transparent;
   height: 50px;
   cursor: pointer;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 300;
   font-size: larger;
   width: 100%;
@@ -214,7 +201,6 @@ nav Button.active::after {
   color: black;
   font-size: medium;
   font-weight: 300;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin-left: 15px;
   margin-bottom: 15px;
   display: flex;
