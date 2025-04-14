@@ -82,6 +82,12 @@
   width: 30vw;
 }
 
+@media (max-width: 450px) {
+  .App-header-text {
+    display: none;
+  }
+}
+
 .App-header-text h1 {
   margin-top: 0px;
   margin-bottom: 5px;
