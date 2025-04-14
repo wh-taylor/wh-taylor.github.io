@@ -24,13 +24,13 @@ export function HomePage() {
             </a>
             </div>
             <p>
-            I am an undergraduate student at the University of Delaware. I am driven to actively pursue research, create impactful projects, and educate.
+                I am an undergraduate student at the University of Delaware. I am driven to actively pursue research, create impactful projects, and educate.
             </p>
             <p>
-            My research interests are primarily in knot theory, machine learning, abstract algebra, data science, and graph theory.
+                My research interests are primarily in knot theory, machine learning, abstract algebra, data science, and graph theory. I am currently involved in research in computational knot theory and topological data analysis, and I am eager to get involved in more research opportunities.
             </p>
             <p>
-            For the spring of 2025, I am taking a teaching assistant role in CISC 181: Introduction to Computer Science II where I assist students in developing a strong foundation in TypeScript.
+                For the spring of 2025, I am taking a teaching assistant role in CISC 181: Introduction to Computer Science II where I assist students in developing a strong foundation in TypeScript.
             </p>
         </div>
     );
