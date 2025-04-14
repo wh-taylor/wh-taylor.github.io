@@ -22,8 +22,7 @@ function App() {
             <a href=".">
               <img src={name} className="App-logo-name" alt="Hayden Taylor" />
             </a>
-            <p>Mathematics & Computer Science Bachelors Student</p>
-            <p>University of Delaware</p>
+            <p>Undergraduate Mathematician.</p>
           </div>
           <div className="App-header-links">
             <a href="https://github.com/wh-taylor">
