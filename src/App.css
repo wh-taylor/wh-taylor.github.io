@@ -230,3 +230,8 @@ nav Button.active::after {
   width: 25px;
   margin-right: 20px;
 }
+
+.research-entry img {
+  width: 40%;
+  float: right;
+}
