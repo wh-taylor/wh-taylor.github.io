@@ -8,6 +8,8 @@ import { ResearchPage } from './pages/ResearchPage';
 import { HomePage } from './pages/HomePage';
 import { ProjectsPage } from './pages/ProjectsPage';
 import { ArticlesPage } from './pages/ArticlesPage';
+import { ExampleArticle } from './pages/ExampleArticle';
+import { Articles } from './pages/Articles';
 
 const router = createBrowserRouter([{
   path: "/",
@@ -28,7 +30,17 @@ const router = createBrowserRouter([{
     },
     {
       path: "articles",
-      element: <ArticlesPage />,
+      element: <Articles />,
+      children: [
+        {
+          path: "/articles",
+          element: <ArticlesPage />,
+        },
+        {
+          path: "how-do-you-calculate-a-knot",
+          element: <ExampleArticle />
+        }
+      ]
     },
   ]
 }]);
