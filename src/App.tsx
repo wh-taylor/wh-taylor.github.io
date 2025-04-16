@@ -3,9 +3,10 @@ import { Header } from './Header';
 import { HomePage } from './pages/HomePage'
 import { ResearchPage } from './pages/ResearchPage';
 import { ProjectsPage } from './pages/ProjectsPage';
+import { ArticlesPage } from './pages/ArticlesPage';
 import './App.css';
 
-type Page = "Home" | "Research" | "Projects";
+type Page = "Home" | "Research" | "Projects" | "Articles";
 
 export interface PageProps {
   page: Page;
@@ -30,6 +31,8 @@ function App(): JSX.Element {
             return <ResearchPage />;
           case 'Projects':
             return <ProjectsPage />;
+          case 'Articles':
+            return <ArticlesPage />;
         }})()
       }
     </div>
