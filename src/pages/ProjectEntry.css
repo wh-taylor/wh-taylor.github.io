@@ -1,6 +1,7 @@
 .project-entry img {
   width: 200px;
   float: right;
+  margin: 20px;
 }
 
 @media (max-width: 450px) {

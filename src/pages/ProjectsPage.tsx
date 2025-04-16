@@ -1,5 +1,7 @@
 import { ProjectEntry } from "./ProjectEntry";
 import problematic from "../images/problematic.png";
+import minds from "../images/minds.png";
+import unknotter from "../images/unknotter.png";
 
 export function ProjectsPage() {
     return (
@@ -7,6 +9,7 @@ export function ProjectsPage() {
             <h1>Projects</h1>
             <ProjectEntry
                 index={0}
+                src={unknotter}
                 title="Unknotter"
                 subtitle="Written in Python. Under the supervision of Dr. Deniz Kutluay."
                 text="A library used for the manipulation and analysis of knots by their knot diagrams. Knots are encoded in their planar diagram notation. Particularly, manipulations have a focus around applying Reidemeister moves to knot diagrams."
@@ -20,6 +23,7 @@ export function ProjectsPage() {
                 />
             <ProjectEntry
                 index={2}
+                src={minds}
                 title="MindS***"
                 subtitle="Written in Python."
                 text="A programming language that compiles into the notoriously simple yet difficult esoteric language BrainF***. Code is intended to stylistically replicate other common programming languages such as C and Rust, but is customized for generating BrainF*** code."
