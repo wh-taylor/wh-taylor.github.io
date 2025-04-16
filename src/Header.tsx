@@ -29,17 +29,17 @@ export function Header({ route }: PageProps): JSX.Element {
               HOME
             </Button>
             <Button
-              className={route === "/research" ? "active" : "inactive"}
+              className={route.startsWith("/research") ? "active" : "inactive"}
               onClick={() => navigate("/research")}>
               RESEARCH
             </Button>
             <Button
-              className={route === "/projects" ? "active" : "inactive"}
+              className={route.startsWith("/projects") ? "active" : "inactive"}
               onClick={() => navigate("/projects")}>
               PROJECTS
             </Button>
             <Button
-              className={route === "/articles" ? "active" : "inactive"}
+              className={route.startsWith("/articles") ? "active" : "inactive"}
               onClick={() => navigate("/articles")}>
               ARTICLES
             </Button>
