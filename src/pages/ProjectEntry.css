@@ -1,5 +1,5 @@
 .project-entry img {
-  width: 200px;
+  width: calc(100px + 5vw);
   float: right;
   margin: 20px;
 }
