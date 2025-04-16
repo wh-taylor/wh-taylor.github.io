@@ -24,7 +24,7 @@ export function ProjectEntry({ index, src, title, subtitle, text, href }: EntryP
             <p>{text}</p>
             {href !== undefined &&
                 <Button
-                    onClick={() => {navigate(".")}}>
+                    onClick={() => {navigate(href)}}>
                     READ MORE
                 </Button>}
         </div>
