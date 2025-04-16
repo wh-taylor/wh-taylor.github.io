@@ -25,3 +25,21 @@
   animation: fadeIn 1s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
   overflow: hidden;
 }
+
+.project-entry Button {
+  border: hidden;
+  height: 35px;
+  cursor: pointer;
+  font-weight: 300;
+  font-size: larger;
+  width: 100%;
+  background-color: #fff;
+  position: relative;
+  border-radius: 10px;
+  transition: 0.3s ease;
+}
+
+.project-entry Button:hover {
+  background: #f5f5f5;
+  transition: 0.3s ease;
+}
