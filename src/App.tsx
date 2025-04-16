@@ -1,40 +1,24 @@
-import React, { JSX, useState } from 'react';
+import React, { JSX } from 'react';
+import { useLocation } from 'react-router';
+import { Outlet } from 'react-router';
 import { Header } from './Header';
-import { HomePage } from './pages/HomePage'
-import { ResearchPage } from './pages/ResearchPage';
-import { ProjectsPage } from './pages/ProjectsPage';
-import { ArticlesPage } from './pages/ArticlesPage';
 import './App.css';
-
-type Page = "Home" | "Research" | "Projects" | "Articles";
+import './Header.css';
+import './pages/ProjectEntry.css';
 
 export interface PageProps {
-  page: Page;
-  setPage: React.Dispatch<React.SetStateAction<Page>>;
+  route: string;
 }
 
 function App(): JSX.Element {
-  const [page, setPage] = useState<Page>("Home");
+  const route = useLocation().pathname;
 
   return (
     <div className="App">
       <header className="App-header">
-        <Header page={page} setPage={setPage} />
+        <Header route={route} />
       </header>
-      <div className="big-picture">
-      </div>
-      {
-        (() => {switch (page) {
-          case 'Home':
-            return <HomePage />;
-          case 'Research':
-            return <ResearchPage />;
-          case 'Projects':
-            return <ProjectsPage />;
-          case 'Articles':
-            return <ArticlesPage />;
-        }})()
-      }
+      <Outlet />
     </div>
   );
 }

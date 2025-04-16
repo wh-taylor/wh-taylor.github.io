@@ -1,6 +1,7 @@
 import React, { JSX } from "react";
 import { Button } from 'react-bootstrap';
 import './ProjectEntry.css';
+import { useNavigate } from "react-router";
 
 interface EntryProps {
     index: number;
@@ -12,6 +13,8 @@ interface EntryProps {
 }
 
 export function ProjectEntry({ index, src, title, subtitle, text, href }: EntryProps): JSX.Element {
+    const navigate = useNavigate();
+
     return (
         <div className="project-entry" style={{animationDelay: `${0.2*index}s`}}>
             {src !== undefined &&
@@ -20,9 +23,10 @@ export function ProjectEntry({ index, src, title, subtitle, text, href }: EntryP
             <h3>{subtitle}</h3>
             <p>{text}</p>
             {href !== undefined &&
-                <a href={href}>
-                    <Button>READ MORE</Button>
-                </a>}
+                <Button
+                    onClick={() => {navigate(".")}}>
+                    READ MORE
+                </Button>}
         </div>
     );
 }

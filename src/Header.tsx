@@ -1,5 +1,6 @@
 import { JSX } from 'react';
 import { Button } from 'react-bootstrap';
+import { useNavigate } from 'react-router';
 import logo from './images/logo.svg';
 import gitHubLogo from './images/githublogo.svg';
 import linkedInLogo from './images/linkedinlogo.svg';
@@ -7,8 +8,10 @@ import name from './images/name.svg';
 import { PageProps } from './App';
 import './Header.css';
 
-export function Header({page, setPage}: PageProps): JSX.Element {
-    return (
+export function Header({ route }: PageProps): JSX.Element {
+  const navigate = useNavigate();
+  
+  return (
         <div className="App-header-div">
           <a href=".">
             <img src={logo} className="App-logo" alt="logo" />
@@ -20,24 +23,24 @@ export function Header({page, setPage}: PageProps): JSX.Element {
             <p>Undergraduate Mathematician and Computer Scientist.</p>
           </div>
           <nav>
-            <Button 
-              className={page === "Home" ? "active" : "inactive"}
-              onClick={() => setPage("Home")}>
+            <Button
+              className={route === "/" ? "active" : "inactive"}
+              onClick={() => navigate("/")}>
               HOME
             </Button>
             <Button
-              className={page === "Research" ? "active" : "inactive"}
-              onClick={() => setPage("Research")}>
+              className={route === "/research" ? "active" : "inactive"}
+              onClick={() => navigate("/research")}>
               RESEARCH
             </Button>
             <Button
-              className={page === "Projects" ? "active" : "inactive"}
-              onClick={() => setPage("Projects")}>
+              className={route === "/projects" ? "active" : "inactive"}
+              onClick={() => navigate("/projects")}>
               PROJECTS
             </Button>
             <Button
-              className={page === "Articles" ? "active" : "inactive"}
-              onClick={() => setPage("Articles")}>
+              className={route === "/articles" ? "active" : "inactive"}
+              onClick={() => navigate("/articles")}>
               ARTICLES
             </Button>
           </nav>
