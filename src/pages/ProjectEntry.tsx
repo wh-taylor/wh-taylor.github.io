@@ -1,4 +1,5 @@
 import React, { JSX } from "react";
+import './ProjectEntry.css';
 
 interface EntryProps {
     index: number;

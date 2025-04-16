@@ -5,6 +5,7 @@ import gitHubLogo from './images/githublogo.svg';
 import linkedInLogo from './images/linkedinlogo.svg';
 import name from './images/name.svg';
 import { PageProps } from './App';
+import './Header.css';
 
 export function Header({page, setPage}: PageProps): JSX.Element {
     return (
