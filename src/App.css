@@ -30,6 +30,7 @@
   display: block;
   margin-left: calc(10px + 5vw);
   margin-bottom: 20px;
+  box-shadow: 3px 3px #555;
 }
 
 @media (max-width: 450px) {
