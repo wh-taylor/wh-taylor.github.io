@@ -1,5 +1,6 @@
 import { ProjectEntry } from './ProjectEntry';
 import pdcodediagram from '../images/pdcodediagram.png'
+import landscape from '../images/landscape.png'
 
 export function ResearchPage() {
     return (
@@ -14,6 +15,7 @@ export function ResearchPage() {
                 />
             <ProjectEntry
                 index={1}
+                src={landscape}
                 title="Topological Data Analysis in Stock Market Data"
                 subtitle="Principal Investigator: Mario Cicchinelli"
                 text="We are interested in the application of topological data analysis in analyzing trends in stock market. Our goal is to effectively predict crashes in the stock market via an early warning system (EWS)."
