@@ -123,3 +123,8 @@ pre > code {
   white-space: pre-wrap;
   word-wrap: break-word;
 }
+
+span.bold-italic {
+  font-style: italic;
+  font-weight: bold;
+}

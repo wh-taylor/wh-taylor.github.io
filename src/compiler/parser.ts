@@ -1,7 +1,10 @@
 export type Text =
     | { type: "text", text: string }
     | { type: "mathline", text: string }
-    | { type: "codeline", text: string };
+    | { type: "codeline", text: string }
+    | { type: "it", text: string }
+    | { type: "bb", text: string }
+    | { type: "itbb", text: string };
 
 export type Node =
     | { type: "h1", input: "text", text: Text[] }
@@ -16,10 +19,30 @@ export type Node =
     | { type: "codeblock", input: "string", text: string }
     | { type: "img", input: "string", text: string, src: string };
 
+function minimum(numbers: number[]): number {
+    let min = Number.MAX_VALUE;
+
+    for (let n of numbers) {
+        if (n < min && n !== -1) {
+            min = n;
+        }
+    }
+
+    if (min === Number.MAX_VALUE) return -1;
+    return min;
+}
+
 function parseText(text: string): Text[] | null {
     let backtick = text.indexOf("`");
     let dollar = text.indexOf("$");
-    if (backtick !== -1 && (backtick < dollar || dollar === -1)) {
+    let star = text.indexOf("*");
+    let doublestar = text.indexOf("**");
+    let triplestar = text.indexOf("***");
+    let min = minimum([backtick, dollar, star, doublestar, triplestar]);
+
+    if (min === -1) {
+        return [{ type: "text", text }];
+    } else if (min === backtick) {
         let rest = text.slice(backtick + 1);
         let backtick2 = rest.indexOf("`");
         let rest2 = rest.slice(backtick2 + 1);
@@ -30,7 +53,7 @@ function parseText(text: string): Text[] | null {
             { type: "codeline", text: text.slice(backtick + 1, backtick + backtick2 + 1) }
         ];
         return thisText.concat(restText);
-    } else if (dollar !== -1 && (dollar < backtick || backtick === -1)) {
+    } else if (min === dollar) {
         let rest = text.slice(dollar + 1);
         let dollar2 = rest.indexOf("$");
         let rest2 = rest.slice(dollar2 + 1);
@@ -41,9 +64,43 @@ function parseText(text: string): Text[] | null {
             { type: "mathline", text: text.slice(dollar + 1, dollar + dollar2 + 1) }
         ];
         return thisText.concat(restText);
-    } else {
-        return [{ type: "text", text }];
+    } else if (min === triplestar) {
+        console.log("*** Detected");
+        let rest = text.slice(triplestar + 3);
+        let triplestar2 = rest.indexOf("***");
+        let rest2 = rest.slice(triplestar2 + 3);
+        let restText = parseText(rest2);
+        if (restText === null) return null;
+        let thisText: Text[] = [
+            { type: "text", text: text.slice(0, triplestar) },
+            { type: "itbb", text: text.slice(triplestar + 3, triplestar + triplestar2 + 3) }
+        ];
+        return thisText.concat(restText);
+    } else if (min === doublestar) {
+        let rest = text.slice(doublestar + 2);
+        let doublestar2 = rest.indexOf("**");
+        let rest2 = rest.slice(doublestar2 + 2);
+        let restText = parseText(rest2);
+        if (restText === null) return null;
+        let thisText: Text[] = [
+            { type: "text", text: text.slice(0, doublestar) },
+            { type: "bb", text: text.slice(doublestar + 2, doublestar + doublestar2 + 2) }
+        ];
+        return thisText.concat(restText);
+    } else if (min === star) {
+        let rest = text.slice(star + 1);
+        let star2 = rest.indexOf("*");
+        let rest2 = rest.slice(star2 + 1);
+        let restText = parseText(rest2);
+        if (restText === null) return null;
+        let thisText: Text[] = [
+            { type: "text", text: text.slice(0, star) },
+            { type: "it", text: text.slice(star + 1, star + star2 + 1) }
+        ];
+        return thisText.concat(restText);
     }
+
+    return null;
 }
 
 export function parseMarkdown(markdown: string): Node[] | null {

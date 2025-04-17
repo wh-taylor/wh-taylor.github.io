@@ -10,6 +10,12 @@ function compileText(text: Text): JSX.Element | null {
             return <>{`\\(${text.text}\\)`}</>
         case "codeline":
             return <code>{text.text}</code>
+        case "it":
+            return <em>{text.text}</em>
+        case "bb":
+            return <strong>{text.text}</strong>
+        case "itbb":
+            return <span className="bold-italic">{text.text}</span>
     }
 }
 

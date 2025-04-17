@@ -21,4 +21,8 @@ for i in range(100):
     print(i)
 ```
 
-![Alt text](minds.png)
+Here is an image:
+
+![Alt text](../images/minds.png)
+
+This text is *italicized*, **bolded**, and ***both***.
