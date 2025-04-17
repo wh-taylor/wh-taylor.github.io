@@ -1,8 +1,17 @@
 import { JSX } from "react";
+import { Button } from "react-bootstrap";
+import { useNavigate } from "react-router";
 
 export function SampleArticle(): JSX.Element {
+    const navigate = useNavigate();
     return (
         <div className="App-body">
+            <Button
+                className="back-button"
+                onClick={() => {navigate("/articles")}}
+            >
+                ← ARTICLES
+            </Button>
             <h1>Sample Article</h1>
             <p className="subtitle">Updated 4/16/2025</p>
 
