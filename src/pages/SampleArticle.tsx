@@ -1,62 +1,55 @@
 import { JSX } from "react";
 import { Button } from "react-bootstrap";
 import { useNavigate } from "react-router";
-import { compileNodeArray } from "../compiler/compiler";
+import { compileMarkdown } from "../compiler/compiler";
 import { Node } from "../compiler/parser";
 
 export function SampleArticle(): JSX.Element {
     const navigate = useNavigate();
 
-    let nodes: Node[] = [
-        { type: "h1", input: "text", text: [
-            { type: "text", text: "Sample Title" }
-        ]},
-        { type: "subt", input: "text", text: [
-            { type: "text", text: "Updated 4/17/2025" }
-        ]},
-        { type: "p", input: "text", text: [
-            { type: "text", text: "This is a sample article generated from Markdown. Let " },
-            { type: "mathline", text: "x" },
-            { type: "text", text: " be a variable. Here is an equation:" },
-        ]},
-        { type: "mathblock", input: "string", text: "E = mc^2." },
-    ]
+    // let nodes: Node[] = [
+    //     { type: "h1", input: "text", text: [
+    //         { type: "text", text: "Sample Title" }
+    //     ]},
+    //     { type: "subt", input: "text", text: [
+    //         { type: "text", text: "Updated 4/17/2025" }
+    //     ]},
+    //     { type: "p", input: "text", text: [
+    //         { type: "text", text: "This is a sample article generated from Markdown. Let " },
+    //         { type: "mathline", text: "x" },
+    //         { type: "text", text: " be a variable. Here is an equation:" },
+    //     ]},
+    //     { type: "mathblock", input: "string", text: "E = mc^2." },
+    // ]
 
     return (
         <div className="App-body">
             <Button
                 className="back-button"
-                onClick={() => {navigate("/articles")}}
-            >
+                onClick={() => {navigate("/articles")}}>
                 ← ARTICLES
             </Button>
 
-            {compileNodeArray(nodes) || ""}
+            {compileMarkdown(`
+                # Sample Title Here
 
-            {/* <h1>Sample Article</h1>
-            <p className="subtitle">Updated 4/16/2025</p>
+                This is a sample page.
 
-            <p>
-                This is an example of what an article will look like once one is published.
-            </p>
+                ## Sample Section
 
-            <h2>Sample Section</h2>
+                Hello. $3x+5$ is inline math and \`print("hello world")\` is inline code. Here is some block math:
 
-            <p>
-                Here is an equation rendered using MathJax:
-            </p>
+                $$
+                    \\int_0^\\infty \\frac{1}{x^2} dx,
+                $$
 
-            <MathJax>{`\\[
-                \\int_0^1 x^2 dx
-                = \\frac{1}{3} \\left[x^3\\right]_0^1
-                = \\frac{1}{3}.
-            \\]`}</MathJax>
+                and here is some block code:
 
-            <MathJax>
-                <p>
-                    Inline math: {"\\(x = 1 + 2 + 3\\)"}.
-                </p>
-            </MathJax> */}
+                \`\`\`for (int i = 0; i < n; i++) {
+    print("hello world");
+}
+                \`\`\`
+            `) || <p>An error occured while compiling the markdown for this page.</p>}
         </div>
     );
 }

@@ -57,9 +57,9 @@ function compileNode(node: Node): JSX.Element | null {
                 {`\\[${node.text}\\]`}
             </MathJax>;
         case "codeblock":
-            return <h1>
+            return <pre><code>
                 {node.text}
-            </h1>;
+            </code></pre>;
     }
 }
 
@@ -70,7 +70,7 @@ function compileMaybeMathNode(node: Node): JSX.Element | null {
     return compileNode(node);
 }
 
-export function compileNodeArray(nodes: Node[]) : JSX.Element | null {
+function compileNodeArray(nodes: Node[]) : JSX.Element | null {
     return <>{nodes.map((node) => compileMaybeMathNode(node))}</>;
 }
 
