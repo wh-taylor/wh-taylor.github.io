@@ -104,7 +104,7 @@ nav {
     flex-wrap: wrap;
   }
 
-  nav Button {
+  nav a {
     flex: 0 0 50%; /* Two buttons per row */
     box-sizing: border-box;
   }
