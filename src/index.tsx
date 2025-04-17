@@ -10,11 +10,12 @@ import { ProjectsPage } from './pages/ProjectsPage';
 import { ArticlesPage } from './pages/ArticlesPage';
 import { Article } from './pages/Article';
 import { PageContainer } from './pages/PageContainer';
+import { ErrorPage } from './ErrorPage';
 
 const router = createHashRouter([{
   path: "/",
   element: <App />,
-  errorElement: <h1>404</h1>,
+  errorElement: <ErrorPage />,
   children: [
     {
       path: "/",
