@@ -60,12 +60,11 @@
   font-weight: 600;
   margin-bottom: 15px;
   margin-top: 10px;
-  font-weight: 300;
+  font-weight: 350;
   font-style: italic;
 }
 
-.App-body p {
-  font-size: medium;
-  font-weight: 300;
+.App-body p, a {
+  /* font-size: medium; */
 }
 
