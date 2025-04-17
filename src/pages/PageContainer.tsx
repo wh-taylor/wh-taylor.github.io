@@ -1,6 +1,6 @@
 import { Outlet } from "react-router";
 
-export function Articles() {
+export function PageContainer() {
     return (
         <div className="App-body">
             <Outlet />

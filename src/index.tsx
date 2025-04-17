@@ -9,7 +9,7 @@ import { HomePage } from './pages/HomePage';
 import { ProjectsPage } from './pages/ProjectsPage';
 import { ArticlesPage } from './pages/ArticlesPage';
 import { Article } from './pages/Article';
-import { Articles } from './pages/Articles';
+import { PageContainer } from './pages/PageContainer';
 
 const router = createBrowserRouter([{
   path: "/",
@@ -22,15 +22,35 @@ const router = createBrowserRouter([{
     },
     {
       path: "research",
-      element: <ResearchPage />,
+      element: <PageContainer />,
+      children: [
+        {
+          path: "/research",
+          element: <ResearchPage />,
+        },
+        {
+          path: "/research/:id",
+          element: <Article />
+        }
+      ]
     },
     {
       path: "projects",
-      element: <ProjectsPage />,
+      element: <PageContainer />,
+      children: [
+        {
+          path: "/projects",
+          element: <ProjectsPage />,
+        },
+        {
+          path: "/projects/:id",
+          element: <Article />
+        }
+      ]
     },
     {
       path: "articles",
-      element: <Articles />,
+      element: <PageContainer />,
       children: [
         {
           path: "/articles",
