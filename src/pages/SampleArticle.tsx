@@ -2,15 +2,9 @@ import { JSX } from "react";
 import { Button } from "react-bootstrap";
 import { useNavigate } from "react-router";
 import { MathJax } from "better-react-mathjax";
-import Article from "../articles/sample-article.mdx"
 
 export function SampleArticle(): JSX.Element {
     const navigate = useNavigate();
-    const components = {
-        p: (properties: any) => {
-          return <p {...properties} />
-        }
-    };
     return (
         <div className="App-body">
             <Button
@@ -19,9 +13,7 @@ export function SampleArticle(): JSX.Element {
             >
                 ← ARTICLES
             </Button>
-
-            <Article components={components} />
-            {/* <h1>Sample Article</h1>
+            <h1>Sample Article</h1>
             <p className="subtitle">Updated 4/16/2025</p>
 
             <p>
@@ -44,7 +36,7 @@ export function SampleArticle(): JSX.Element {
                 <p>
                     Inline math: {"\\(x = 1 + 2 + 3\\)"}.
                 </p>
-            </MathJax> */}
+            </MathJax>
         </div>
     );
 }
