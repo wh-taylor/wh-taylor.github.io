@@ -60,6 +60,8 @@ function compileNode(node: Node): JSX.Element | null {
             return <pre><code>
                 {node.text}
             </code></pre>;
+        case "img":
+            return <img src={process.env.PUBLIC_URL + "/posts/images/" + node.src} alt={node.text} />
     }
 }
 

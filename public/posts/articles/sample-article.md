@@ -20,3 +20,5 @@ Here is a code block:
 for i in range(100):
     print(i)
 ```
+
+![Alt text](minds.png)

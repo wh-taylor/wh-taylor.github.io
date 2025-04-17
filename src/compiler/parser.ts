@@ -13,7 +13,8 @@ export type Node =
     | { type: "subt", input: "text", text: Text[] }
     | { type: "p", input: "text", text: Text[] }
     | { type: "mathblock", input: "string", text: string }
-    | { type: "codeblock", input: "string", text: string };
+    | { type: "codeblock", input: "string", text: string }
+    | { type: "img", input: "string", text: string, src: string };
 
 function parseText(text: string): Text[] | null {
     let backtick = text.indexOf("`");
@@ -106,6 +107,13 @@ export function parseMarkdown(markdown: string): Node[] | null {
             let text = finishLine();
             if (text === null) return null;
             nodes.push({ type: "subt", input: "text", text });
+        } else if (check(feed, "![")) {
+            let altText = finishUntil("]");
+            if (altText === null) return null;
+            if (markdown[i-1] !== "(") return null;
+            let src = finishUntil(")");
+            if (src === null) return null;
+            nodes.push({ type: "img", input: "string", text: altText, src });
         } else if (check(feed, "$$")) {
             let text = finishUntil("$$");
             if (text === null) return null;
