@@ -41,31 +41,56 @@
   }
 }
 
-.App-body h1 {
+.App-body h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
   margin-bottom: 0px;
   margin-top: 0px;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-.App-body h2 {
-  font-weight: 600;
-  margin-bottom: 0px;
-  margin-top: 0px;
+.App-body h2, h3, h4, h5, h6 {
   font-weight: 500;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-.App-body h3 {
-  font-weight: 600;
+.App-body p.subtitle {
   margin-bottom: 15px;
-  margin-top: 10px;
-  font-weight: 300;
+  margin-top: 5px;
+  font-weight: 400;
   font-style: italic;
 }
 
-.App-body p {
+.listing {
+  color: black;
   font-size: medium;
-  font-weight: 300;
+  margin-left: 15px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
 }
 
+.listing a {
+  text-decoration: none;
+  color: black;
+}
+
+.listing img {
+  width: 25px;
+  margin-right: 20px;
+}
+
+Button.back-button {
+  border: hidden;
+  cursor: pointer;
+  font-weight: 350;
+  font-size: medium;
+  background-color: #fff;
+  position: relative;
+  border-radius: 10px;
+  transition: 0.3s ease;
+  margin-bottom: 15px;
+}
+
+Button.back-button:hover {
+  background: #f5f5f5;
+  transition: 0.3s ease;
+}

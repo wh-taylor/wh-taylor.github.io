@@ -8,9 +8,9 @@ export function HomePage() {
             <img className="portrait" src={portrait} alt="Portrait of Hayden Taylor" />
             <h1>W. Hayden Taylor</h1>
             <h2>University of Delaware</h2>
-            <h3>
-            Mathematics (H.B.S.) and Computer Science (B.S.)
-            </h3>
+            <p className="subtitle">
+                Mathematics (H.B.S.) and Computer Science (B.S.)
+            </p>
             <div className="listing">
             <img src={emailLogo} alt="Email" />
             <a href="mailto:h.taylor2106@gmail.com">
