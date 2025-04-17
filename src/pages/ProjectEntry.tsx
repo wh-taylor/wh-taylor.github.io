@@ -20,7 +20,7 @@ export function ProjectEntry({ index, src, title, subtitle, text, href }: EntryP
             {src !== undefined &&
                 <img src={src} alt="" />}
             <h2>{title}</h2>
-            <h3>{subtitle}</h3>
+            <p className="subtitle">{subtitle}</p>
             <p>{text}</p>
             {href !== undefined &&
                 <Button
