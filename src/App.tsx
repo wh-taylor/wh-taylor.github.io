@@ -5,6 +5,7 @@ import { Header } from './Header';
 import './App.css';
 import './Header.css';
 import './pages/ProjectEntry.css';
+import { MathJaxContext } from 'better-react-mathjax';
 
 export interface PageProps {
   route: string;
@@ -14,12 +15,14 @@ function App(): JSX.Element {
   const route = useLocation().pathname;
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <Header route={route} />
-      </header>
-      <Outlet />
-    </div>
+    <MathJaxContext>
+      <div className="App">
+        <header className="App-header">
+          <Header route={route} />
+        </header>
+        <Outlet />
+      </div>
+    </MathJaxContext>
   );
 }
 

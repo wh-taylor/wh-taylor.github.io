@@ -117,6 +117,8 @@ nav Button {
   cursor: pointer;
   font-weight: 350;
   font-size: larger;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
   width: 100%;
   position: relative;
 }
