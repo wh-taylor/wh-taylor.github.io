@@ -22,8 +22,9 @@ export function Article(): JSX.Element {
                 onClick={() => {navigate("/articles")}}>
                 ← ARTICLES
             </Button>
-
-            {(markdown && compileMarkdown(markdown)) || <p>An error occured while compiling the markdown for this page.</p>}
+            <div className="article">
+                {(markdown && compileMarkdown(markdown)) || <p>An error occured while compiling the markdown for this page.</p>}
+            </div>
         </div>
     );
 }

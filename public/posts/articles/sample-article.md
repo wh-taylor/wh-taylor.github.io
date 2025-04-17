@@ -23,6 +23,6 @@ for i in range(100):
 
 Here is an image:
 
-![Alt text](../images/minds.png)
+![Alt text](unknotter.png)
 
 This text is *italicized*, **bolded**, and ***both***.
