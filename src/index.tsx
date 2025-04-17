@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { createBrowserRouter, RouterProvider } from 'react-router';
+import { createHashRouter, RouterProvider } from 'react-router';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
@@ -11,7 +11,7 @@ import { ArticlesPage } from './pages/ArticlesPage';
 import { Article } from './pages/Article';
 import { PageContainer } from './pages/PageContainer';
 
-const router = createBrowserRouter([{
+const router = createHashRouter([{
   path: "/",
   element: <App />,
   errorElement: <h1>404</h1>,
