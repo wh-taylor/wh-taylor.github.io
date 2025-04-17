@@ -102,6 +102,10 @@ export function parseMarkdown(markdown: string): Node[] | null {
             let text = finishLine();
             if (text === null) return null;
             nodes.push({ type: "h1", input: "text", text });
+        } else if (check(feed, "::")) {
+            let text = finishLine();
+            if (text === null) return null;
+            nodes.push({ type: "subt", input: "text", text });
         } else if (check(feed, "$$")) {
             let text = finishUntil("$$");
             if (text === null) return null;

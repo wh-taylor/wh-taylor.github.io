@@ -1,6 +1,6 @@
 # Unknotter
 
-Written in Python. Under the supervision of Dr. Deniz Kutluay.
+:: Written in Python. Under the supervision of Dr. Deniz Kutluay.
 
 ![Two unknots, one is tangled.](../../images/unknotter.png)
 

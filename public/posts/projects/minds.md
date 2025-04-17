@@ -1,6 +1,6 @@
 # MindS***
 
-Written in Python.
+:: Written in Python.
 
 ![A snippet of BrainF*** code.](../../images/minds.png)
 

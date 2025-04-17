@@ -1,6 +1,6 @@
 # Sample Article
 
-Updated 4/17/2025
+:: Updated 4/17/2025
 
 This is an example of what an article will look like once one is published.
 
