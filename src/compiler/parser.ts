@@ -106,8 +106,8 @@ export function parseMarkdown(markdown: string): Node[] | null {
             let text = finishUntil("$$");
             if (text === null) return null;
             nodes.push({ type: "mathblock", input: "string", text });
-        } else if (check(feed, "```")) {
-            let text = finishUntil("```");
+        } else if (check(feed, "```\n")) {
+            let text = finishUntil("\n```");
             if (text === null) return null;
             nodes.push({ type: "codeblock", input: "string", text });
         } else if (check(feed, " ")) {
