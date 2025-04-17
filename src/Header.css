@@ -110,6 +110,10 @@ nav {
   }
 }
 
+nav a {
+  width: 100%;
+}
+
 nav Button {
   border: hidden;
   background: transparent;

@@ -1,6 +1,7 @@
 import { JSX, useState, useEffect } from "react";
 import { Button } from "react-bootstrap";
-import { useLocation, useNavigate } from "react-router";
+import { Link } from "react-router";
+import { useLocation } from "react-router";
 import { compileMarkdown } from "../compiler/compiler";
 
 interface PageDescriptor {
@@ -19,7 +20,6 @@ export interface Structure {
 
 export function Article(): JSX.Element {
     const [markdown, setMarkdown] = useState<string | null>(null);
-    const navigate = useNavigate();
     const location = useLocation();
     const path = location.pathname;
     
@@ -34,11 +34,12 @@ export function Article(): JSX.Element {
 
     return (
         <div className="App-body">
-            <Button
-                className="back-button"
-                onClick={() => {navigate(returnPath)}}>
-                ← {returnPath.slice(1).toUpperCase()}
-            </Button>
+            <Link to={returnPath}>
+                <Button
+                    className="back-button">
+                    ← {returnPath.slice(1).toUpperCase()}
+                </Button>
+            </Link>
             <div className="article">
                 {(markdown && compileMarkdown(markdown)) || <p>An error occured while compiling the markdown for this page.</p>}
             </div>
