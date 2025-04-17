@@ -22,7 +22,7 @@
   border-radius: 5px;
   box-shadow: 3px 3px #555;
   opacity: 0;
-  animation: fadeIn 1s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+  animation: fadeIn 0.4s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
   overflow: hidden;
 }
 

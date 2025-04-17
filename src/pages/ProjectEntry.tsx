@@ -14,7 +14,7 @@ interface EntryProps {
 
 export function ProjectEntry({ index, src, title, subtitle, text, href }: EntryProps): JSX.Element {
     return (
-        <div className="project-entry" style={{animationDelay: `${0.2*index}s`}}>
+        <div className="project-entry" style={{animationDelay: `${0.1*index}s`}}>
             {src !== undefined &&
                 <img src={src} alt="" />}
             <h2>{title}</h2>
