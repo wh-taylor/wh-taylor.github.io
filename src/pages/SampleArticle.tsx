@@ -1,10 +1,27 @@
 import { JSX } from "react";
 import { Button } from "react-bootstrap";
 import { useNavigate } from "react-router";
-import { MathJax } from "better-react-mathjax";
+import { compileNodeArray } from "../compiler/compiler";
+import { Node } from "../compiler/parser";
 
 export function SampleArticle(): JSX.Element {
     const navigate = useNavigate();
+
+    let nodes: Node[] = [
+        { type: "h1", input: "text", text: [
+            { type: "text", text: "Sample Title" }
+        ]},
+        { type: "subt", input: "text", text: [
+            { type: "text", text: "Updated 4/17/2025" }
+        ]},
+        { type: "p", input: "text", text: [
+            { type: "text", text: "This is a sample article generated from Markdown. Let " },
+            { type: "mathline", text: "x" },
+            { type: "text", text: " be a variable. Here is an equation:" },
+        ]},
+        { type: "mathblock", input: "string", text: "E = mc^2." },
+    ]
+
     return (
         <div className="App-body">
             <Button
@@ -13,7 +30,10 @@ export function SampleArticle(): JSX.Element {
             >
                 ← ARTICLES
             </Button>
-            <h1>Sample Article</h1>
+
+            {compileNodeArray(nodes) || ""}
+
+            {/* <h1>Sample Article</h1>
             <p className="subtitle">Updated 4/16/2025</p>
 
             <p>
@@ -36,7 +56,7 @@ export function SampleArticle(): JSX.Element {
                 <p>
                     Inline math: {"\\(x = 1 + 2 + 3\\)"}.
                 </p>
-            </MathJax>
+            </MathJax> */}
         </div>
     );
 }
