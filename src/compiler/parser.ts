@@ -65,7 +65,6 @@ function parseText(text: string): Text[] | null {
         ];
         return thisText.concat(restText);
     } else if (min === triplestar) {
-        console.log("*** Detected");
         let rest = text.slice(triplestar + 3);
         let triplestar2 = rest.indexOf("***");
         let rest2 = rest.slice(triplestar2 + 3);
