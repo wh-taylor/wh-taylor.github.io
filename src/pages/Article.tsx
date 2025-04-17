@@ -3,6 +3,7 @@ import { Button } from "react-bootstrap";
 import { Link } from "react-router";
 import { useLocation } from "react-router";
 import { compileMarkdown } from "../compiler/compiler";
+import { ErrorContent } from "../ErrorContent";
 
 interface PageDescriptor {
     src: string | null,
@@ -25,9 +26,15 @@ export function Article(): JSX.Element {
     
     useEffect(() => {
         fetch(`/posts${location.pathname}.md`)
-            .then((res) => res.text())
+            .then((res) => {
+                if (res.ok && !res.headers.get('content-type')?.includes('text/html')) {
+                    return res.text();
+                } else {
+                    return null;
+                }
+            })
             .then(setMarkdown)
-            .catch((err) => console.error('Error loading markdown:', err))
+            .catch()
     }, [location]);
 
     const returnPath = path.slice(0, path.indexOf("/", 1))
@@ -41,7 +48,7 @@ export function Article(): JSX.Element {
                 </Button>
             </Link>
             <div className="article">
-                {(markdown && compileMarkdown(markdown)) || <p>An error occured while compiling the markdown for this page.</p>}
+                {(markdown && compileMarkdown(markdown)) || <ErrorContent />}
             </div>
         </div>
     );
