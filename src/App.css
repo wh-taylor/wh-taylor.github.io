@@ -1,3 +1,8 @@
+html {
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
 .App {
   text-align: left;
 }
@@ -7,15 +12,15 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #ffffff; 
+  background: #fff; 
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #222222; 
+  background: #ccc; 
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #3c3c3c; 
+  background: #ddd; 
 }
 
 .App-body {
