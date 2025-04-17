@@ -8,7 +8,7 @@ import { ResearchPage } from './pages/ResearchPage';
 import { HomePage } from './pages/HomePage';
 import { ProjectsPage } from './pages/ProjectsPage';
 import { ArticlesPage } from './pages/ArticlesPage';
-import { SampleArticle } from './pages/SampleArticle';
+import { Article } from './pages/Article';
 import { Articles } from './pages/Articles';
 
 const router = createBrowserRouter([{
@@ -37,8 +37,8 @@ const router = createBrowserRouter([{
           element: <ArticlesPage />,
         },
         {
-          path: "sample-article",
-          element: <SampleArticle />
+          path: "/articles/:id",
+          element: <Article />
         }
       ]
     },
