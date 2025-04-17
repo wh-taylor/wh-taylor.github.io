@@ -20,7 +20,7 @@
 
 .App-body {
   margin: 0 auto;
-  width: min(calc(400px + 30vw), 80vw);
+  width: min(calc(400px + 50vw), 80vw);
   animation: fadeIn 1s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
 }
 
