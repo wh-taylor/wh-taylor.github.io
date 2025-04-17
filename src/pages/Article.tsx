@@ -3,6 +3,20 @@ import { Button } from "react-bootstrap";
 import { useNavigate, useParams } from "react-router";
 import { compileMarkdown } from "../compiler/compiler";
 
+interface PageDescriptor {
+    src: string | null,
+    title: string,
+    subtitle: string,
+    text: string,
+    href: string,
+}
+
+export interface Structure {
+    articles: PageDescriptor[],
+    projects: PageDescriptor[],
+    research: PageDescriptor[],
+}
+
 export function Article(): JSX.Element {
     const [markdown, setMarkdown] = useState<string | null>(null);
     const navigate = useNavigate();

@@ -1,0 +1,50 @@
+{
+    "articles": [
+        {
+            "src": "unknotter.png",
+            "title": "Sample Article",
+            "subtitle": "Updated 4/17/2025",
+            "text": "This is an example of what an article will look like once one is published.",
+            "href": "sample-article"
+        }
+    ],
+    "projects": [
+        {
+            "src": "unknotter.png",
+            "title": "Unknotter",
+            "subtitle": "Written in Python. Under the supervision of Dr. Deniz Kutluay.",
+            "text": "A library used for the manipulation and analysis of knots by their knot diagrams. Knots are encoded in their planar diagram notation. Particularly, manipulations have a focus around applying Reidemeister moves to knot diagrams.",
+            "href": "unknotter"
+        },
+        {
+            "src": "problematic.png",
+            "title": "Problematic",
+            "subtitle": "Written in React with TypeScript.",
+            "text": "An AI-powered problemset generation tool. Using Google Gemini's API, given a prompt, a PDF of generated problems along with an answer key is provided as output. The PDF is compiled via LaTeX, and the LaTeX code is viewable. Primarily intended for mathematics professors and students who want an efficient and effective way to generate new practice problems.",
+            "href": "problematic"
+        },
+        {
+            "src": "minds.png",
+            "title": "MindS***",
+            "subtitle": "Written in Python.",
+            "text": "A programming language that compiles into the notoriously simple yet difficult esoteric language BrainF***. Code is intended to stylistically replicate other common programming languages such as C and Rust, but is customized for generating BrainF*** code.",
+            "href": "minds"
+        }
+    ],
+    "research": [
+        {
+            "src": "pdcodediagram.png",
+            "title": "Applying Machine Learning to Knot Diagram Reduction",
+            "subtitle": "Principal Investigator: Dr. Deniz Kutluay",
+            "text": "We are interested in the implementation of software in Python for locally moving knot diagrams so that we can apply machine learning to algorithmically untangle knots.",
+            "href": "knot-ml"
+        },
+        {
+            "src": "landscape.png",
+            "title": "Topological Data Analysis in Stock Market Data",
+            "subtitle": "Principal Investigator: Mario Cicchinelli",
+            "text": "We are interested in the application of topological data analysis in analyzing trends in stock market. Our goal is to effectively predict crashes in the stock market via an early warning system (EWS).",
+            "href": "tda-market"
+        }
+    ]
+}

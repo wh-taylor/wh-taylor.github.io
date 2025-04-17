@@ -1,25 +1,29 @@
 import { ProjectEntry } from './ProjectEntry';
-import pdcodediagram from '../images/pdcodediagram.png'
-import landscape from '../images/landscape.png'
+import { useEffect, useState } from 'react';
+import { Structure } from './Article';
 
 export function ResearchPage() {
+    const [json, setJson] = useState<Structure | null>(null);
+        
+    useEffect(() => {
+        fetch(`/posts/structure.json`)
+            .then((res) => res.json())
+            .then(setJson)
+            .catch((err) => console.error('Error getting structure JSON:', err))
+    }, []);
+
     return (
         <div className="App-body">
             <h1>Research</h1>
-            <ProjectEntry
-                index={0}
-                src={pdcodediagram}
-                title="Applying Machine Learning to Knot Diagram Reduction"
-                subtitle="Principal Investigator: Dr. Deniz Kutluay"
-                text="We are interested in the implementation of software in Python for locally moving knot diagrams so that we can apply machine learning to algorithmically untangle knots."
-                />
-            <ProjectEntry
-                index={1}
-                src={landscape}
-                title="Topological Data Analysis in Stock Market Data"
-                subtitle="Principal Investigator: Mario Cicchinelli"
-                text="We are interested in the application of topological data analysis in analyzing trends in stock market. Our goal is to effectively predict crashes in the stock market via an early warning system (EWS)."
-                />
+            
+            {json?.research.map((page, i) =>
+                <ProjectEntry
+                    index={i}
+                    src={process.env.PUBLIC_URL + "/posts/images/" + page.src || undefined}
+                    title={page.title}
+                    subtitle={page.subtitle}
+                    text={page.text}
+                    href={page.href} />)}
         </div>
     );
 }
