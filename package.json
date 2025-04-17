@@ -1,5 +1,6 @@
 {
   "name": "wh-taylor.github.io",
+  "homepage": "https://wh-taylor.github.io",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
