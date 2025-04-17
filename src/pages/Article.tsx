@@ -48,7 +48,7 @@ export function Article(): JSX.Element {
                 </Button>
             </Link>
             <div className="article">
-                {(markdown && compileMarkdown(markdown)) || <ErrorContent />}
+                {(markdown && compileMarkdown(markdown)) || <></>}
             </div>
         </div>
     );
