@@ -8,7 +8,7 @@ import { ResearchPage } from './pages/ResearchPage';
 import { HomePage } from './pages/HomePage';
 import { ProjectsPage } from './pages/ProjectsPage';
 import { ArticlesPage } from './pages/ArticlesPage';
-import { Article } from './pages/Article';
+import { Post } from './pages/Post';
 import { PageContainer } from './pages/PageContainer';
 import { ErrorPage } from './ErrorPage';
 
@@ -31,7 +31,7 @@ const router = createHashRouter([{
         },
         {
           path: "/research/:id",
-          element: <Article />
+          element: <Post />
         }
       ]
     },
@@ -45,7 +45,7 @@ const router = createHashRouter([{
         },
         {
           path: "/projects/:id",
-          element: <Article />
+          element: <Post />
         }
       ]
     },
@@ -59,7 +59,7 @@ const router = createHashRouter([{
         },
         {
           path: "/articles/:id",
-          element: <Article />
+          element: <Post />
         }
       ]
     },

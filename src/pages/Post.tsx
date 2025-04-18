@@ -3,7 +3,6 @@ import { Button } from "react-bootstrap";
 import { Link } from "react-router";
 import { useLocation } from "react-router";
 import { compileMarkdown } from "../compiler/compiler";
-import { ErrorContent } from "../ErrorContent";
 
 interface PageDescriptor {
     src: string | null,
@@ -19,7 +18,7 @@ export interface Structure {
     research: PageDescriptor[],
 }
 
-export function Article(): JSX.Element {
+export function Post(): JSX.Element {
     const [markdown, setMarkdown] = useState<string | null>(null);
     const location = useLocation();
     const path = location.pathname;

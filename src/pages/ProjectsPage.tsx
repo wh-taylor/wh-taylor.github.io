@@ -1,6 +1,6 @@
 import { ProjectEntry } from "./ProjectEntry";
 import { useEffect, useState } from "react";
-import { Structure } from "./Article";
+import { Structure } from "./Post";
 
 export function ProjectsPage() {
     const [json, setJson] = useState<Structure | null>(null);
