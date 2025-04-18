@@ -15,8 +15,6 @@ export function ArticlesPage() {
     return (
         <div className="App-body">
             <h1>Articles</h1>
-            
-            <p>There are currently no articles published. The article below is a proof of concept for the near future.</p>
 
             {json?.articles.map((page, i) =>
                 <ProjectEntry
