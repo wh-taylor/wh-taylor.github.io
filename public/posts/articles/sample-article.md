@@ -1,28 +1,37 @@
-# Sample Article
+:: Modified 2025-04-18
 
-:: Updated 4/17/2025
+# How do you calculate a knot?
 
-This is an example of what an article will look like once one is published.
+:: The Theory of Planar Diagram Notation
 
-## Sample Section
+Knots are particularly tricky objects to work with due to their intricate nature. Prior to the invention of computers, mathematicians working in knot theory had to rely on physical knots and drawings. However, it would be nice to have a way to put knots into a computer so that we can perform computations on them instead of doing everything by hand.
 
-Inline math: $x = 1 + 2 + 3$. Inline code: `print("hello world")`. Here is a block equation rendered using MathJax:
+Although there are many different ways to notate knot diagrams (Dowker-Thistlethwaite notation, Gauss codes, Conway notation, etc.), we have found that the most useful notation is **planar diagram notation**, or planar diagram codes.
 
-$$
-    \int_0^1 x^2 dx
-    = \frac{1}{3} \left[x^3\right]_0^1
-    = \frac{1}{3}.
-$$
+## Construction
 
-Here is a code block:
+How to construct the planar diagram code of a knot diagram.
 
-```
-for i in range(100):
-    print(i)
-```
+## Benefits of Planar Diagram Notation
 
-Here is an image:
+Planar diagram notation is unique for knot diagrams up to the **swing move**.
 
-![Alt text](unknotter.png)
+## Basic Manipulations
 
-This text is *italicized*, **bolded**, and ***both***.
+Algorithms for reversal, reflection, etc.
+
+## Reidemeister Moves
+
+Algorithms for the three Reidemeister moves.
+
+### The Twist
+
+Algorithm for the twist.
+
+### The Poke
+
+Algorithm for the poke.
+
+### The Slide
+
+Algorithm for the slide.
