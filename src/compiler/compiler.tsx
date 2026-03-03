@@ -89,6 +89,10 @@ function compileNodeArray(nodes: Node[]) : JSX.Element | null {
     return <>{nodes.map((node, i) => compileMaybeMathNode(node, i))}</>;
 }
 
+function extractPlainText(texts: Text[]): string {
+    return texts.map(text => text.text).join('');
+}
+
 export function compileMarkdown(markdown: string): JSX.Element | null {
     const { content } = extractFrontmatter(markdown);
     let nodes: Node[] | null = parseMarkdown(content);
@@ -113,7 +117,22 @@ export function compileMarkdownPreview(markdown: string): JSX.Element | null {
         ? nodes.slice(0, firstParagraphIndex + 1)
         : nodes;
     
-    const convertedNodes = nodesToCompile.map(node => 
+    const truncatedNodes = nodesToCompile.map((node, idx) => {
+        if (node.type === "p" && idx === nodesToCompile.length - 1) {
+            const plainText = extractPlainText(node.text);
+            const words = plainText.split(/\s+/);
+            if (words.length > 50) {
+                const truncated = words.slice(0, 50).join(' ') + "...";
+                return {
+                    ...node,
+                    text: [{ type: "text" as const, text: truncated }]
+                };
+            }
+        }
+        return node;
+    });
+    
+    const convertedNodes = truncatedNodes.map(node => 
         node.type === "h1" ? { ...node, type: "h2" as const } : node
     );
 
