@@ -24,6 +24,9 @@
   opacity: 0;
   animation: fadeIn 0.4s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
   overflow: hidden;
+  position: relative;
+  text-overflow: ellipsis;
+  padding-bottom: 40px;
 }
 
 .project-entry Button {
@@ -34,11 +37,17 @@
   font-size: larger;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
   sans-serif;
-  width: 100%;
+  width: calc(100% - 20px);
   background-color: #fff;
   position: relative;
   border-radius: 10px;
   transition: 0.3s ease;
+  /* align-self: end; */
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  /* transform: translate(-50%, 0); */
+  margin: 10px;
 }
 
 .project-entry Button:hover {

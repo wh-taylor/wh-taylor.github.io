@@ -16,15 +16,17 @@ export function ProjectsPage() {
         <div className="App-body">
             <h1>Projects</h1>
 
-            {json?.projects.map((page, i) =>
-                <ProjectEntry
-                    key={i}
-                    index={i}
-                    src={process.env.PUBLIC_URL + "/posts/images/" + page.src || undefined}
-                    title={page.title}
-                    subtitle={page.subtitle}
-                    text={page.text}
-                    href={page.href} />)}
+            <div className="entry-list">
+                {json?.projects.map((page, i) =>
+                    <ProjectEntry
+                        key={i}
+                        index={i}
+                        src={process.env.PUBLIC_URL + "/posts/images/" + page.src || undefined}
+                        title={page.title}
+                        subtitle={page.subtitle}
+                        text={page.text}
+                        href={page.href} />)}
+            </div>
         </div>
     );
 }

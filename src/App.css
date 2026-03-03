@@ -64,6 +64,24 @@ html {
   font-style: italic;
 }
 
+.entry-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+
+@media (max-width: 1200px) {
+  .entry-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 850px) {
+  .entry-list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
 .listing {
   color: black;
   font-size: medium;
