@@ -4,9 +4,9 @@ import { createHashRouter, RouterProvider } from 'react-router';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { HomePage } from './pages/HomePage';
-import { ProjectsPage } from './pages/ProjectsPage';
-import { Post } from './pages/Post';
+import { AboutPage } from './pages/AboutPage';
+import { WorkPage } from './pages/WorkPage';
+import { Post } from './pages/WorkPost';
 import { PageContainer } from './pages/PageContainer';
 import { ErrorPage } from './ErrorPage';
 
@@ -17,18 +17,18 @@ const router = createHashRouter([{
   children: [
     {
       path: "/",
-      element: <HomePage />,
+      element: <AboutPage />,
     },
     {
-      path: "projects",
+      path: "work",
       element: <PageContainer />,
       children: [
         {
-          path: "/projects",
-          element: <ProjectsPage />,
+          path: "/work",
+          element: <WorkPage />,
         },
         {
-          path: "/projects/:id",
+          path: "/work/:id",
           element: <Post />
         }
       ]

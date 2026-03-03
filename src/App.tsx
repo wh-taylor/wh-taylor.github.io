@@ -4,7 +4,7 @@ import { Outlet } from 'react-router';
 import { Header } from './Header';
 import './App.css';
 import './Header.css';
-import './pages/ProjectEntry.css';
+import './pages/WorkEntry.css';
 import { MathJaxContext } from 'better-react-mathjax';
 
 export interface PageProps {

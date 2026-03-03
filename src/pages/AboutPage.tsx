@@ -1,6 +1,6 @@
 import portrait from '../images/portrait.png';
 
-export function HomePage() {
+export function AboutPage() {
     return (
         <div className="App-body">
             <img className="portrait" src={portrait} alt="Portrait of Hayden Taylor" />

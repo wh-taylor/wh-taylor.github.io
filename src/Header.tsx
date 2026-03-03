@@ -23,13 +23,13 @@ export function Header({ route }: PageProps): JSX.Element {
           <nav>
             <Link to="/">
               <Button className={route === "/" ? "active" : "inactive"}>
-                HOME
+                ABOUT
               </Button>
             </Link>
-            <Link to="/projects">
+            <Link to="/work">
               <Button
-                className={route.startsWith("/projects") ? "active" : "inactive"}>
-                PROJECTS
+                className={route.startsWith("/work") ? "active" : "inactive"}>
+                WORK
               </Button>
             </Link>
           </nav>

@@ -1,15 +1,15 @@
-import { ProjectEntry } from "./ProjectEntry";
+import { ProjectEntry } from "./WorkEntry";
 import { useEffect, useState } from "react";
-import { Structure } from "./Post";
+import { Structure } from "./WorkPost";
 import { getFrontmatter } from "../compiler/compiler";
-import "./ProjectsPage.css";
+import "./WorkPage.css";
 
 interface PostMetadata {
   title?: string;
   content: string;
 }
 
-export function ProjectsPage() {
+export function WorkPage() {
   const [json, setJson] = useState<Structure | null>(null);
   const [allTags, setAllTags] = useState<Set<string>>(new Set());
   const [selectedTags, setSelectedTags] = useState<Set<string>>(new Set());
@@ -81,12 +81,12 @@ export function ProjectsPage() {
 
   return (
     <div className="App-body">
-      <h1>Projects</h1>
+      <h1>Work</h1>
 
       <div className="search-bar">
         <input
           type="text"
-          placeholder="Search projects..."
+          placeholder="Search..."
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
           className="search-input"
