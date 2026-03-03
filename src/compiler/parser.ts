@@ -42,6 +42,14 @@ function parseText(text: string): Text[] | null {
 
     if (min === -1) {
         return [{ type: "text", text }];
+    } else if (text[min - 1] == "\\") {
+        let rest = text.slice(min + 1);
+        let restText = parseText(rest);
+        if (restText === null) return null;
+        let thisText: Text[] = [
+            { type: "text", text: text.slice(0, min - 1) + text[min] }
+        ];
+        return thisText.concat(restText);
     } else if (min === backtick) {
         let rest = text.slice(backtick + 1);
         let backtick2 = rest.indexOf("`");
