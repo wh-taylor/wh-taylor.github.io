@@ -1,5 +1,6 @@
 export type Text =
     | { type: "text", text: string }
+    | { type: "link", text: Text[], src: string }
     | { type: "mathline", text: string }
     | { type: "codeline", text: string }
     | { type: "it", text: string }
@@ -36,9 +37,10 @@ function parseText(text: string): Text[] | null {
     let backtick = text.indexOf("`");
     let dollar = text.indexOf("$");
     let star = text.indexOf("*");
+    let leftbr = text.indexOf("[");
     let doublestar = text.indexOf("**");
     let triplestar = text.indexOf("***");
-    let min = minimum([backtick, dollar, star, doublestar, triplestar]);
+    let min = minimum([backtick, dollar, star, leftbr, doublestar, triplestar]);
 
     if (min === -1) {
         return [{ type: "text", text }];
@@ -49,6 +51,22 @@ function parseText(text: string): Text[] | null {
         let thisText: Text[] = [
             { type: "text", text: text.slice(0, min - 1) + text[min] }
         ];
+        return thisText.concat(restText);
+    } else if (min === leftbr) {
+        let rest = text.slice(leftbr + 1);
+        let rightbr = rest.indexOf("]");
+        if (rest[rightbr + 1] !== "(") return null;
+        let rest2 = rest.slice(rightbr + 2);
+        let rightpa = rest2.indexOf(")");
+        let rest3 = rest2.slice(rightpa + 1);
+        let restText = parseText(rest3);
+        if (restText === null) return null;
+        let textLabel = parseText(text.slice(leftbr + 1, leftbr + rightbr + 1));
+        if (textLabel === null) return null;
+        let thisText: Text[] = [
+            { type: "text", text: text.slice(0, leftbr) },
+            { type: "link", text: textLabel, src: text.slice(leftbr + rightbr + 3, leftbr + rightbr + rightpa + 3) },
+        ]
         return thisText.concat(restText);
     } else if (min === backtick) {
         let rest = text.slice(backtick + 1);

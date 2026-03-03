@@ -10,6 +10,8 @@ function compileText(text: Text, key: number): JSX.Element | null {
     switch (text.type) {
         case "text":
             return <span key={key}>{text.text}</span>
+        case "link":
+            return <a key={key} href={text.src}>{text.text.map((t) => compileText(t, key))}</a>
         case "mathline":
             return <span key={key}>{`\\(${text.text}\\)`}</span>
         case "codeline":
