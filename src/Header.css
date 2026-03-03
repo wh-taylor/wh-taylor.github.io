@@ -3,15 +3,22 @@
 }
 
 .App-header {
-  padding: 5vh;
+  padding: 2vh;
   padding-left: 50px;
   padding-right: 50px;
+  margin-bottom: 50px;
   display: flex;
   flex-direction: column;
   align-items: left;
   justify-content: center;
   font-size: calc(8px + 1vmin);
-  background-color: #ffffffdd;
+  background-color: #fffe;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom-color: #bbb;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
 }
 
 @media (max-width: 850px) {
