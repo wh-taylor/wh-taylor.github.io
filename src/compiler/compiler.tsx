@@ -2,6 +2,9 @@ import { JSX } from "react";
 import { Node, parseMarkdown, Text } from "./parser";
 import { MathJax } from "better-react-mathjax";
 
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { stackoverflowLight } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+
 function compileText(text: Text, key: number): JSX.Element | null {
     switch (text.type) {
         case "text":
@@ -63,9 +66,12 @@ function compileNode(node: Node, key: number): JSX.Element | null {
                 {`\\[${node.text}\\]`}
             </MathJax>;
         case "codeblock":
-            return <pre key={key}><code>
+            // return <pre key={key} className={node.lang ? `language-${node.lang}` : ''}><code>
+            //     {node.text}
+            // </code></pre>;
+            return <SyntaxHighlighter language={node.lang ?? ""} style={stackoverflowLight}>
                 {node.text}
-            </code></pre>;
+            </SyntaxHighlighter>;
         case "img":
             return <img key={key} src={process.env.PUBLIC_URL + "/posts/images/" + node.src} alt={node.text} />
     }

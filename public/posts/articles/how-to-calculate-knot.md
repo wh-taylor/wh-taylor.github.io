@@ -35,3 +35,8 @@ Algorithm for the poke.
 ### The Slide
 
 Algorithm for the slide.
+
+```py
+for i in arr:
+    print("Hello world!")
+```

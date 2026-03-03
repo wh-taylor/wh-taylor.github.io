@@ -16,7 +16,7 @@ export type Node =
     | { type: "subt", input: "text", text: Text[] }
     | { type: "p", input: "text", text: Text[] }
     | { type: "mathblock", input: "string", text: string }
-    | { type: "codeblock", input: "string", text: string }
+    | { type: "codeblock", input: "string", lang: string | null, text: string }
     | { type: "img", input: "string", text: string, src: string };
 
 function minimum(numbers: number[]): number {
@@ -174,10 +174,12 @@ export function parseMarkdown(markdown: string): Node[] | null {
             let text = finishUntil("$$");
             if (text === null) return null;
             nodes.push({ type: "mathblock", input: "string", text });
-        } else if (check(feed, "```\n")) {
+        } else if (check(feed, "```")) {
+            let lang = finishUntil("\n");
+            i--;
             let text = finishUntil("\n```");
             if (text === null) return null;
-            nodes.push({ type: "codeblock", input: "string", text });
+            nodes.push({ type: "codeblock", input: "string", lang, text });
         } else if (check(feed, " ")) {
             // skip whitespace
         } else {
