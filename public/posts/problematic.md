@@ -1,3 +1,7 @@
+---
+tags: ["New Tag"]
+---
+
 # Problematic
 
 :: Written in React with TypeScript.

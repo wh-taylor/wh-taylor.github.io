@@ -7,9 +7,10 @@ import { compileMarkdownPreview, getFrontmatter } from "../compiler/compiler";
 interface EntryProps {
     index: number;
     href: string;
+    selectedTags?: Set<string>;
 }
 
-export function ProjectEntry({ index, href }: EntryProps): JSX.Element {
+export function ProjectEntry({ index, href, selectedTags = new Set() }: EntryProps): JSX.Element | null {
     const [markdown, setMarkdown] = useState<string | null>(null);
     
     useEffect(() => {
@@ -26,6 +27,17 @@ export function ProjectEntry({ index, href }: EntryProps): JSX.Element {
     }, [setMarkdown, href]);
 
     const frontmatter = markdown ? getFrontmatter(markdown) : {};
+
+    // Filter based on selected tags
+    if (selectedTags.size > 0) {
+        const postTags = frontmatter.tags || [];
+        const hasMatchingTag = Array.from(selectedTags).some(tag => 
+            postTags.includes(tag)
+        );
+        if (!hasMatchingTag) {
+            return null;
+        }
+    }
 
     return (
         <div className="project-entry" style={{animationDelay: `${0.1*index}s`}}>
