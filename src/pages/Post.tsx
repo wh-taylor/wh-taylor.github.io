@@ -4,26 +4,17 @@ import { Link } from "react-router";
 import { useLocation } from "react-router";
 import { compileMarkdown } from "../compiler/compiler";
 
-interface PageDescriptor {
-    src: string | null,
-    title: string,
-    subtitle: string,
-    text: string,
-    href: string,
-}
-
 export interface Structure {
-    projects: PageDescriptor[],
-    research: PageDescriptor[],
+    posts: string[],
 }
 
 export function Post(): JSX.Element {
     const [markdown, setMarkdown] = useState<string | null>(null);
     const location = useLocation();
     const path = location.pathname;
-    
+
     useEffect(() => {
-        fetch(`/posts${location.pathname}.md`)
+        fetch(`/posts/${location.pathname.slice(location.pathname.indexOf('/', 1) + 1)}.md`)
             .then((res) => {
                 if (res.ok && !res.headers.get('content-type')?.includes('text/html')) {
                     return res.text();

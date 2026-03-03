@@ -26,12 +26,6 @@ export function Header({ route }: PageProps): JSX.Element {
                 HOME
               </Button>
             </Link>
-            <Link to="/research">
-              <Button
-                className={route.startsWith("/research") ? "active" : "inactive"}>
-                RESEARCH
-              </Button>
-            </Link>
             <Link to="/projects">
               <Button
                 className={route.startsWith("/projects") ? "active" : "inactive"}>

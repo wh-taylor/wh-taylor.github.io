@@ -4,7 +4,6 @@ import { createHashRouter, RouterProvider } from 'react-router';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { ResearchPage } from './pages/ResearchPage';
 import { HomePage } from './pages/HomePage';
 import { ProjectsPage } from './pages/ProjectsPage';
 import { Post } from './pages/Post';
@@ -19,20 +18,6 @@ const router = createHashRouter([{
     {
       path: "/",
       element: <HomePage />,
-    },
-    {
-      path: "research",
-      element: <PageContainer />,
-      children: [
-        {
-          path: "/research",
-          element: <ResearchPage />,
-        },
-        {
-          path: "/research/:id",
-          element: <Post />
-        }
-      ]
     },
     {
       path: "projects",

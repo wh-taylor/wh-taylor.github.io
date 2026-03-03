@@ -1,6 +1,4 @@
 import portrait from '../images/portrait.png';
-import emailLogo from '../images/emaillogo.svg';
-import institutionLogo from '../images/institutionlogo.svg';
 
 export function HomePage() {
     return (
