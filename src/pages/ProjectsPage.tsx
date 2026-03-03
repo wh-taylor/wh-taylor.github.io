@@ -6,7 +6,7 @@ export function ProjectsPage() {
     const [json, setJson] = useState<Structure | null>(null);
     
     useEffect(() => {
-        fetch(`/posts/structure.json`)
+        fetch(`/structure.json`)
             .then((res) => res.json())
             .then(setJson)
             .catch((err) => console.error('Error getting structure JSON:', err))
