@@ -1,6 +1,7 @@
 export interface Frontmatter {
   tags?: string[];
-  title?: string;
+  date?: string;
+  end?: string;
   [key: string]: any;
 }
 

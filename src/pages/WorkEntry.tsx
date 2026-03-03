@@ -11,6 +11,14 @@ interface EntryProps {
     selectedTags?: Set<string>;
 }
 
+function formatDate(dateString: string): string {
+    const date = new Date(dateString);
+    return date.toLocaleDateString(undefined, {
+        month: "short",
+        year: "numeric",
+    });
+}
+
 export function ProjectEntry({ index, href, selectedTags = new Set() }: EntryProps): JSX.Element | null {
     const [markdown, setMarkdown] = useState<string | null>(null);
     
@@ -43,6 +51,12 @@ export function ProjectEntry({ index, href, selectedTags = new Set() }: EntryPro
     return (
         <div className="project-entry" style={{animationDelay: `${0.1*index}s`}}>
             {(markdown && compileMarkdownPreview(markdown)) || <></>}
+            {frontmatter.date && (
+                <div className="date">
+                    {formatDate(frontmatter.date)}
+                    {frontmatter.end ? ` to ${formatDate(frontmatter.end)}` : ""}
+                </div>
+            )}
             {frontmatter.tags && (
                 <div className="tags">
                     {frontmatter.tags.map(tag => (
