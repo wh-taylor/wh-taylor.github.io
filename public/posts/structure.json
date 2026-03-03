@@ -1,13 +1,4 @@
 {
-    "articles": [
-        {
-            "src": "unknotter.png",
-            "title": "How do you calculate a knot?",
-            "subtitle": "The Theory of Planar Diagram Notation",
-            "text": "Knots are particularly tricky objects to work with due to their intricate nature. Prior to the invention of computers, mathematicians working in knot theory had to rely on physical knots and drawings. However, it would be nice to have a way to put knots into a computer so that we can perform computations on them instead of doing everything by hand.",
-            "href": "how-to-calculate-knot"
-        }
-    ],
     "projects": [
         {
             "src": "unknotter.png",

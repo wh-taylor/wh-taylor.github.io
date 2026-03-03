@@ -38,12 +38,6 @@ export function Header({ route }: PageProps): JSX.Element {
                 PROJECTS
               </Button>
             </Link>
-            <Link to="/articles">
-              <Button
-                className={route.startsWith("/articles") ? "active" : "inactive"}>
-                ARTICLES
-              </Button>
-            </Link>
           </nav>
           <div className="App-header-links">
             <a href="https://github.com/wh-taylor">

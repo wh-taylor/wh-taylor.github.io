@@ -7,7 +7,6 @@ import reportWebVitals from './reportWebVitals';
 import { ResearchPage } from './pages/ResearchPage';
 import { HomePage } from './pages/HomePage';
 import { ProjectsPage } from './pages/ProjectsPage';
-import { ArticlesPage } from './pages/ArticlesPage';
 import { Post } from './pages/Post';
 import { PageContainer } from './pages/PageContainer';
 import { ErrorPage } from './ErrorPage';
@@ -48,21 +47,7 @@ const router = createHashRouter([{
           element: <Post />
         }
       ]
-    },
-    {
-      path: "articles",
-      element: <PageContainer />,
-      children: [
-        {
-          path: "/articles",
-          element: <ArticlesPage />,
-        },
-        {
-          path: "/articles/:id",
-          element: <Post />
-        }
-      ]
-    },
+    }
   ]
 }]);
 

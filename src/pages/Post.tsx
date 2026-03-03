@@ -13,7 +13,6 @@ interface PageDescriptor {
 }
 
 export interface Structure {
-    articles: PageDescriptor[],
     projects: PageDescriptor[],
     research: PageDescriptor[],
 }
