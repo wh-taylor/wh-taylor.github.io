@@ -54,3 +54,7 @@
   background: #f5f5f5;
   transition: 0.3s ease;
 }
+
+.project-entry p {
+  font-size: small;
+}

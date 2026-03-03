@@ -2,7 +2,7 @@ import React, { JSX, useEffect, useState } from "react";
 import { Button } from 'react-bootstrap';
 import './ProjectEntry.css';
 import { Link } from "react-router";
-import { compileMarkdown } from "../compiler/compiler";
+import { compileMarkdownPreview } from "../compiler/compiler";
 
 interface EntryProps {
     index: number;
@@ -27,7 +27,7 @@ export function ProjectEntry({ index, href }: EntryProps): JSX.Element {
 
     return (
         <div className="project-entry" style={{animationDelay: `${0.1*index}s`}}>
-            {(markdown && compileMarkdown(markdown)) || <></>}
+            {(markdown && compileMarkdownPreview(markdown)) || <></>}
             {href !== undefined &&
                 <Link to={href.slice(href.indexOf('/') + 1)}>
                     <Button>

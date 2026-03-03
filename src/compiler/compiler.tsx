@@ -97,3 +97,22 @@ export function compileMarkdown(markdown: string): JSX.Element | null {
 
     return compileNodeArray(nodes);
 }
+
+export function compileMarkdownPreview(markdown: string): JSX.Element | null {
+    let nodes: Node[] | null = parseMarkdown(markdown);
+
+    if (nodes === null) {
+        return null;
+    }
+
+    const firstParagraphIndex = nodes.findIndex(node => node.type === "p");
+    const nodesToCompile = firstParagraphIndex !== -1 
+        ? nodes.slice(0, firstParagraphIndex + 1)
+        : nodes;
+    
+    const convertedNodes = nodesToCompile.map(node => 
+        node.type === "h1" ? { ...node, type: "h2" as const } : node
+    );
+
+    return compileNodeArray(convertedNodes);
+}
