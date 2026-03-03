@@ -106,7 +106,7 @@ Button.back-button {
   sans-serif;
   background-color: #fff;
   position: relative;
-  border-radius: 10px;
+  border-radius: 5px;
   transition: 0.3s ease;
   margin-bottom: 15px;
 }
