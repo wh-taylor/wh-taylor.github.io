@@ -107,14 +107,20 @@ export function ProjectsPage() {
           </div>
       )}
 
-      <div className="entry-list">
-        {filteredPosts.map((page, i) =>
-          <ProjectEntry
-            key={i}
-            index={i}
-            href={page}
-            selectedTags={selectedTags} />)}
-      </div>
+      {filteredPosts.length === 0 ? (
+        <div className="no-results">
+          No posts matched.
+        </div>
+      ) : (
+        <div className="entry-list">
+          {filteredPosts.map((page, i) =>
+            <ProjectEntry
+              key={i}
+              index={i}
+              href={page}
+              selectedTags={selectedTags} />)}
+        </div>
+      )}
     </div>
   );
 }
