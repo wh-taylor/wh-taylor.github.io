@@ -1,6 +1,7 @@
 import React, { JSX, useEffect, useState } from "react";
 import { Button } from 'react-bootstrap';
 import './ProjectEntry.css';
+import './ProjectsPage.css';
 import { Link } from "react-router";
 import { compileMarkdownPreview, getFrontmatter } from "../compiler/compiler";
 
