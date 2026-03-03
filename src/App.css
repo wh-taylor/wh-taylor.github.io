@@ -89,25 +89,12 @@ html {
   }
 }
 
-.listing {
-  color: black;
+h1 a.email {
   font-size: medium;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-  sans-serif;
-  margin-left: 15px;
-  margin-bottom: 15px;
-  display: flex;
-  align-items: center;
-}
-
-.listing a {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 200;
   text-decoration: none;
   color: black;
-}
-
-.listing img {
-  width: 25px;
-  margin-right: 20px;
 }
 
 Button.back-button {

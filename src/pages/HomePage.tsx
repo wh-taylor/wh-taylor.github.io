@@ -6,23 +6,11 @@ export function HomePage() {
     return (
         <div className="App-body">
             <img className="portrait" src={portrait} alt="Portrait of Hayden Taylor" />
-            <h1>W. Hayden Taylor</h1>
+            <h1>W. Hayden Taylor <a className='email' href="mailto:haydent@udel.com">haydent@udel.edu</a></h1>
             <h2>University of Delaware</h2>
             <p className="subtitle">
-                Mathematics (H.B.S.) and Computer Science (B.S.)
+                Mathematics (H.B.S.) and Computer Science (B.S.) 
             </p>
-            <div className="listing">
-            <img src={emailLogo} alt="Email" />
-            <a href="mailto:h.taylor2106@gmail.com">
-                h.taylor2106@gmail.com
-            </a>
-            </div>
-            <div className="listing">
-            <img src={institutionLogo} alt="Institution" />
-            <a href="mailto:haydent@udel.com">
-                haydent@udel.edu
-            </a>
-            </div>
             <p>
                 I am an undergraduate student at the University of Delaware. I am driven to actively pursue research, create impactful projects, and educate.
             </p>
