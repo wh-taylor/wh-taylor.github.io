@@ -60,8 +60,15 @@ html {
 .App-body p.subtitle {
   margin-bottom: 15px;
   margin-top: 5px;
-  font-weight: 400;
+  font-weight: 200;
   font-style: italic;
+}
+
+.App-body p {
+  margin-bottom: 15px;
+  margin-top: 5px;
+  font-weight: 300;
+  line-height: 1.5;
 }
 
 .entry-list {
