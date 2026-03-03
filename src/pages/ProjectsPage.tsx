@@ -101,7 +101,7 @@ export function ProjectsPage() {
                 className={`filter-btn ${selectedTags.has(tag) ? 'active' : ''}`}
                 onClick={() => toggleTag(tag)}
               >
-                {tag}
+                {tag.toUpperCase()}
               </button>
             ))}
           </div>

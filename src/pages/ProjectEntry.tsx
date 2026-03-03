@@ -47,7 +47,7 @@ export function ProjectEntry({ index, href, selectedTags = new Set() }: EntryPro
                 <div className="tags">
                     {frontmatter.tags.map(tag => (
                         <span key={tag} className={`tag tag-${tag.toLowerCase()}`}>
-                            {tag}
+                            {tag.toUpperCase()}
                         </span>
                     ))}
                 </div>
