@@ -2,7 +2,7 @@ import { JSX, useState, useEffect } from "react";
 import { Button } from "react-bootstrap";
 import { Link } from "react-router";
 import { useLocation } from "react-router";
-import { compileMarkdown } from "../compiler/compiler";
+import { compileMarkdown, getFrontmatter } from "../compiler/compiler";
 
 export interface Structure {
     posts: string[],
@@ -27,6 +27,7 @@ export function Post(): JSX.Element {
     }, [location]);
 
     const returnPath = path.slice(0, path.indexOf("/", 1))
+    const frontmatter = markdown ? getFrontmatter(markdown) : {};
 
     return (
         <div className="App-body">
@@ -36,6 +37,15 @@ export function Post(): JSX.Element {
                     ← {returnPath.slice(1).toUpperCase()}
                 </Button>
             </Link>
+            {frontmatter.tags && (
+                <div className="tags">
+                    {frontmatter.tags.map(tag => (
+                        <span key={tag} className={`tag tag-${tag.toLowerCase()}`}>
+                            {tag}
+                        </span>
+                    ))}
+                </div>
+            )}
             <div className="article">
                 {(markdown && compileMarkdown(markdown)) || <></>}
             </div>
