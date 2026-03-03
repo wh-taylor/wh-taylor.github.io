@@ -35,8 +35,7 @@
   cursor: pointer;
   font-weight: 350;
   font-size: larger;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-  sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   width: calc(100% - 20px);
   background-color: #fff;
   position: relative;
@@ -57,4 +56,34 @@
 
 .project-entry p {
   font-size: small;
+}
+
+.tags {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.tag {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 16px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.tag-project {
+  background-color: #e3f2fd;
+  color: #1976d2;
+}
+
+.tag-research {
+  background-color: #e8f5e9;
+  color: #388e3c;
+}
+
+.tag-reading {
+  background-color: #f5efe8;
+  color: #db8727;
 }

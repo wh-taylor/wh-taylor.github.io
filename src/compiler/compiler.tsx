@@ -4,6 +4,7 @@ import { MathJax } from "better-react-mathjax";
 
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { stackoverflowLight } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { extractFrontmatter, Frontmatter } from "./frontmatter";
 
 function compileText(text: Text, key: number): JSX.Element | null {
     switch (text.type) {
@@ -89,7 +90,8 @@ function compileNodeArray(nodes: Node[]) : JSX.Element | null {
 }
 
 export function compileMarkdown(markdown: string): JSX.Element | null {
-    let nodes: Node[] | null = parseMarkdown(markdown);
+    const { content } = extractFrontmatter(markdown);
+    let nodes: Node[] | null = parseMarkdown(content);
 
     if (nodes === null) {
         return null;
@@ -99,7 +101,8 @@ export function compileMarkdown(markdown: string): JSX.Element | null {
 }
 
 export function compileMarkdownPreview(markdown: string): JSX.Element | null {
-    let nodes: Node[] | null = parseMarkdown(markdown);
+    const { content } = extractFrontmatter(markdown);
+    let nodes: Node[] | null = parseMarkdown(content);
 
     if (nodes === null) {
         return null;
@@ -115,4 +118,9 @@ export function compileMarkdownPreview(markdown: string): JSX.Element | null {
     );
 
     return compileNodeArray(convertedNodes);
+}
+
+export function getFrontmatter(markdown: string): Frontmatter {
+    const { frontmatter } = extractFrontmatter(markdown);
+    return frontmatter;
 }
