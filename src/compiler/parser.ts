@@ -44,7 +44,7 @@ function parseText(text: string): Text[] | null {
 
     if (min === -1) {
         return [{ type: "text", text }];
-    } else if (text[min - 1] == "\\") {
+    } else if (text[min - 1] === "\\") {
         let rest = text.slice(min + 1);
         let restText = parseText(rest);
         if (restText === null) return null;
